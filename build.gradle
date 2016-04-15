@@ -5,7 +5,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = 'co.iay.leetcode.Tester.Solution'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.6
 
 repositories {
     mavenCentral()
