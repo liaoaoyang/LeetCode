@@ -1,3 +1,5 @@
+package co.iay.leetcode.Easy;
+
 /**
  * Created by aoyang on 16/4/14.
  */

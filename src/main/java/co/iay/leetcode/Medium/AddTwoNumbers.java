@@ -1,3 +1,7 @@
+package co.iay.leetcode.Medium;
+
+import co.iay.leetcode.DataStructures.ListNode;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,8 +15,8 @@ import java.util.Map;
  */
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        Map<Integer, Integer> lm1 = new HashMap<>();
-        Map<Integer, Integer> lm2 = new HashMap<>();
+        Map<Integer, Integer> lm1 = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> lm2 = new HashMap<Integer, Integer>();
 
         ListNode l = l1;
         int idx = 0;

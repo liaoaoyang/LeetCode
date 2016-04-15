@@ -1,3 +1,5 @@
+package co.iay.leetcode.Hard;
+
 /**
  * Created by ng on 16/4/12.
  */

@@ -1,3 +1,5 @@
+package co.iay.leetcode.Easy;
+
 import java.util.HashMap;
 import java.util.Map;
 

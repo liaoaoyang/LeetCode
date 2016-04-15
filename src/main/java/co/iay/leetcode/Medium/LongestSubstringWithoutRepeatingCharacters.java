@@ -1,3 +1,5 @@
+package co.iay.leetcode.Medium;
+
 /**
  * Created by ng on 16/4/10.
  */
