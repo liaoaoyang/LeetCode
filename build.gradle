@@ -2,6 +2,8 @@ group 'co.iay.leetcode'
 version '1.0'
 
 apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'co.iay.leetcode.Tester.Solution'
 
 sourceCompatibility = 1.5
 
