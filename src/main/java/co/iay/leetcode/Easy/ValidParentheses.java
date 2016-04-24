@@ -1,28 +1,26 @@
 package co.iay.leetcode.Easy;
 
-import java.util.Stack;
-
 /**
  * Created by ng on 16/4/24.
  */
 public class ValidParentheses {
     public boolean isValid(String s) {
-        Stack<String> parenthesesStack = new Stack<String>();
+        String p = "";
 
         for (int i = 0; i < s.length(); ++i) {
             String c = s.substring(i, i + 1);
 
             if ("([{".contains(c)) {
-                parenthesesStack.push(c);
+                p = p + c;
                 continue;
             }
 
             if (")]}".contains(c)) {
-                if (parenthesesStack.size() == 0) {
+                if (p.length() == 0) {
                     return false;
                 }
 
-                String topOfStack = parenthesesStack.peek();
+                String topOfStack = p.substring(p.length() - 1, p.length());
 
                 if (c.equals(")") && !topOfStack.equals("(")) {
                     return false;
@@ -36,10 +34,10 @@ public class ValidParentheses {
                     return false;
                 }
 
-                parenthesesStack.pop();
+                p = p.substring(0, p.length() - 1);
             }
         }
 
-        return parenthesesStack.size() == 0;
+        return p.length() == 0;
     }
 }
