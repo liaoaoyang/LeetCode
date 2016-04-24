@@ -18,15 +18,17 @@ public class ValidParentheses {
             }
 
             if (")]}".contains(c)) {
-                if (c.equals(")") && !parenthesesStack.peek().equals("(")) {
+                String topOfStack = parenthesesStack.peek();
+
+                if (c.equals(")") && !topOfStack.equals("(")) {
                     return false;
                 }
 
-                if (c.equals("]") && !parenthesesStack.peek().equals("[")) {
+                if (c.equals("]") && !topOfStack.equals("[")) {
                     return false;
                 }
 
-                if (c.equals("}") && !parenthesesStack.peek().equals("{")) {
+                if (c.equals("}") && !topOfStack.equals("{")) {
                     return false;
                 }
 
