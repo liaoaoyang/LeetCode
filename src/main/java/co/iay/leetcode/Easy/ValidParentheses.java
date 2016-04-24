@@ -18,6 +18,10 @@ public class ValidParentheses {
             }
 
             if (")]}".contains(c)) {
+                if (parenthesesStack.size() == 0) {
+                    return false;
+                }
+
                 String topOfStack = parenthesesStack.peek();
 
                 if (c.equals(")") && !topOfStack.equals("(")) {
