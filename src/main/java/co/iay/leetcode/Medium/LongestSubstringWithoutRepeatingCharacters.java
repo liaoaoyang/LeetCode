@@ -2,6 +2,7 @@ package co.iay.leetcode.Medium;
 
 /**
  * Created by ng on 16/4/10.
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
 public class LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {

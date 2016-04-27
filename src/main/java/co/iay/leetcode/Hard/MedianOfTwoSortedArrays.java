@@ -2,6 +2,7 @@ package co.iay.leetcode.Hard;
 
 /**
  * Created by ng on 16/4/12.
+ * https://leetcode.com/problems/median-of-two-sorted-arrays/
  */
 public class MedianOfTwoSortedArrays {
 	private static final int ASC = 0;

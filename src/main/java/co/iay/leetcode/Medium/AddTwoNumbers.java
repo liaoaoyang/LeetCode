@@ -1,18 +1,14 @@
 package co.iay.leetcode.Medium;
 
+/**
+ * https://leetcode.com/problems/add-two-numbers/
+ */
+
 import co.iay.leetcode.DataStructures.ListNode;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         Map<Integer, Integer> lm1 = new HashMap<Integer, Integer>();

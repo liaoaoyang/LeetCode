@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 /**
  * Created by ng on 16/4/23.
+ * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  */
 public class RemoveNthNodeFromEndOfList {
     public ListNode removeNthFromEnd(ListNode head, int n) {
