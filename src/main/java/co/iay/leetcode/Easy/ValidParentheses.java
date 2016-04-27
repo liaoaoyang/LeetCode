@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/4/24.
+ * https://leetcode.com/problems/valid-parentheses/
  */
 public class ValidParentheses {
     public boolean isValid(String s) {
