@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/4/30.
+ * https://leetcode.com/problems/remove-element/
  */
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
