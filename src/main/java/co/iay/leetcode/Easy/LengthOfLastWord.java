@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by aoyang on 16/5/6.
+ * https://leetcode.com/problems/length-of-last-word/
  */
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
