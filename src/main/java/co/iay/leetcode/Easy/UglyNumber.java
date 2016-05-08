@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/5/8.
+ * https://leetcode.com/problems/ugly-number/
  */
 public class UglyNumber {
     public boolean isUgly(int num) {
