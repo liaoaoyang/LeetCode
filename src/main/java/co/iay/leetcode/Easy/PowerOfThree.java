@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 /**
  * Created by ng on 16/5/8.
+ * https://leetcode.com/problems/power-of-three/
  */
 public class PowerOfThree {
     public boolean isPowerOfThree(int n) {
