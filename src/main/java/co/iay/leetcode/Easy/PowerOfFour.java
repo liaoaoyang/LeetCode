@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 /**
  * Created by ng on 16/5/12.
+ * https://leetcode.com/problems/power-of-four/
  */
 public class PowerOfFour {
     public boolean isPowerOfFour(int num) {
