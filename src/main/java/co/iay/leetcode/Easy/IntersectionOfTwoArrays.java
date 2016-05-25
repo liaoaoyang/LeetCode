@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 /**
  * Created by ng on 16/5/24.
+ * https://leetcode.com/problems/intersection-of-two-arrays/
  */
 public class IntersectionOfTwoArrays {
     public int[] intersection(int[] nums1, int[] nums2) {
