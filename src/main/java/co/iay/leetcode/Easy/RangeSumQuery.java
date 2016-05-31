@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/5/28.
+ * https://leetcode.com/problems/range-sum-query-immutable/
  */
 public class RangeSumQuery {
     int[] nums = null;
