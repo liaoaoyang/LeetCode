@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/6/3.
+ * https://leetcode.com/problems/string-to-integer-atoi/
  */
 public class StringToInteger {
     public int myAtoi(String str) {
