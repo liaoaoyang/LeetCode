@@ -5,22 +5,24 @@ package co.iay.leetcode.Easy;
  */
 public class PlusOne {
     public int[] plusOne(int[] digits) {
-        String result = "";
+        int[] r = new int[digits.length];
         int now = 1;
 
         for (int i = digits.length - 1; i >= 0; --i) {
-            result = (now + digits[i]) % 10 + result;
+            r[i] = (now + digits[i]) % 10;
             now = (now + digits[i]) / 10;
         }
 
         if (now > 0) {
-            result = now + result;
-        }
+            int[] result = new int[digits.length + 1];
 
-        int[] r = new int[result.length()];
+            for (int i = digits.length; i >= 1; --i) {
+                result[i] = r[i - 1];
+            }
 
-        for (int i = 0; i < result.length(); ++i) {
-            r[i] = result.charAt(i) - '0';
+            result[0] = now;
+
+            return result;
         }
 
         return r;
