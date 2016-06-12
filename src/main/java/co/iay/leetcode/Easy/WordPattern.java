@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 /**
  * Created by ng on 16/6/6.
+ * https://leetcode.com/problems/word-pattern/
  */
 public class WordPattern {
     public boolean wordPattern(String pattern, String str) {
