@@ -1,6 +1,6 @@
 package co.iay.leetcode.Easy;
 
-import co.iay.leetcode.ParentsClasses.VersionControl;
+import co.iay.leetcode.ParentClasses.VersionControl;
 
 /**
  * Created by ng on 16/6/13.
