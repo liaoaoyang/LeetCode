@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/6/9.
+ * https://leetcode.com/problems/add-binary/
  */
 public class AddBinary {
     public String addBinary(String a, String b) {
