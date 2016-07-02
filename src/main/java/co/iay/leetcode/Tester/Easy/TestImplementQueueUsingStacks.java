@@ -30,4 +30,21 @@ public class TestImplementQueueUsingStacks {
 
         Assert.assertArrayEquals(poped, case1);
     }
+
+    @Test
+    public void testMyQueueCase2() {
+        ImplementQueueUsingStacks.MyQueue myQueue = new ImplementQueueUsingStacks.MyQueue();
+
+        Assert.assertEquals(true, myQueue.empty());
+        myQueue.push(1);
+        Assert.assertEquals(false, myQueue.empty());
+    }
+
+    @Test
+    public void testMyQueueCase3() {
+        ImplementQueueUsingStacks.MyQueue myQueue = new ImplementQueueUsingStacks.MyQueue();
+
+        myQueue.push(1);
+        Assert.assertEquals(1, myQueue.peek());
+    }
 }
