@@ -5,6 +5,7 @@ import java.util.Set;
 
 /**
  * Created by ng on 16/7/3.
+ * https://leetcode.com/problems/happy-number/
  */
 public class HappyNumber {
     public boolean isHappy(int n) {
