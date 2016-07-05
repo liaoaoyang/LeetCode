@@ -4,6 +4,7 @@ import java.util.Stack;
 
 /**
  * Created by ng on 16/7/2.
+ * https://leetcode.com/problems/implement-queue-using-stacks/
  */
 public class ImplementQueueUsingStacks {
     public static class MyQueue {
