@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/7/5.
+ * https://leetcode.com/problems/excel-sheet-column-title/
  */
 public class ExcelSheetColumnNumber {
     public int titleToNumber(String s) {
