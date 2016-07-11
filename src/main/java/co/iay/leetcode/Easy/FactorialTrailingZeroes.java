@@ -5,22 +5,17 @@ package co.iay.leetcode.Easy;
  */
 public class FactorialTrailingZeroes {
     public int trailingZeroes(int n) {
-        int numberOf2 = 0;
-        int numberOf5 = 0;
-
-        for (int i = 1; i <= n; ++i) {
-            int v = i;
-            while (v > 0 && (v % 2 == 0 || v % 5 == 0)) {
-                if (v % 2 == 0) {
-                    v /= 2;
-                    numberOf2++;
-                } else {
-                    v /= 5;
-                    numberOf5++;
-                }
-            }
+        if (n <= 0) {
+            return 0;
         }
 
-        return Math.min(numberOf2, numberOf5);
+        int result = 0;
+
+        while (n > 0) {
+            result += n / 5;
+            n /= 5;
+        }
+
+        return result;
     }
 }
