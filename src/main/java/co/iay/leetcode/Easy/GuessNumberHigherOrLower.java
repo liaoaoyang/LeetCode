@@ -4,6 +4,7 @@ import co.iay.leetcode.ParentClasses.GuessGame;
 
 /**
  * Created by ng on 16/7/15.
+ * https://leetcode.com/problems/guess-number-higher-or-lower/
  */
 public class GuessNumberHigherOrLower extends GuessGame {
     public int guessNumber(int n) {
