@@ -1,41 +1,30 @@
 package co.iay.leetcode.Easy;
 
-import java.util.HashMap;
-
 /**
  * Created by ng on 16/8/12.
  */
 public class RansomNote {
+    private static final int COUNTER_LENGTH = 256;
+
     public boolean canConstruct(String ransomNote, String magazine) {
-        HashMap<String, Integer> r = new HashMap<String, Integer>();
-        HashMap<String, Integer> m = new HashMap<String, Integer>();
+        int[] rCounter = new int[COUNTER_LENGTH];
+        int[] mCounter = new int[COUNTER_LENGTH];
+
+        for(int i = 0; i < COUNTER_LENGTH; ++i) {
+            rCounter[i] = 0;
+            mCounter[i] = 0;
+        }
 
         for (int i = 0; i < ransomNote.length(); ++i) {
-            String rn = ransomNote.charAt(i) + "";
-
-            if (r.containsKey(rn)) {
-                r.put(rn, r.get(rn) + 1);
-            } else {
-                r.put(rn, 1);
-            }
+            rCounter[ransomNote.charAt(i) - '0']++;
         }
 
         for (int i = 0; i < magazine.length(); ++i) {
-            String mz = magazine.charAt(i) + "";
-
-            if (m.containsKey(mz)) {
-                m.put(mz, m.get(mz) + 1);
-            } else {
-                m.put(mz, 1);
-            }
+            mCounter[magazine.charAt(i) - '0']++;
         }
 
-        for (String k : r.keySet()) {
-            if (!m.containsKey(k)) {
-                return false;
-            }
-
-            if (m.get(k) < r.get(k)) {
+        for (int i = 0; i < COUNTER_LENGTH; ++i) {
+            if (mCounter[i] < rCounter[i]) {
                 return false;
             }
         }
