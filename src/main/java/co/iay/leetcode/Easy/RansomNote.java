@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/8/12.
+ * https://leetcode.com/problems/ransom-note/
  */
 public class RansomNote {
     private static final int COUNTER_LENGTH = 256;
