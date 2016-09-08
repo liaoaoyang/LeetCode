@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/8/28.
+ * https://leetcode.com/problems/first-unique-character-in-a-string/
  */
 public class FirstUniqueCharacterInAString {
     private static int LEN = 256;
