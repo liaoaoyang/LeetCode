@@ -1,4 +1,4 @@
-package co.iay.leetcode.Tester.Easy;
+package co.iay.leetcode.Tester.Medium;
 
 import co.iay.leetcode.Medium.UTF8Validation;
 import org.junit.Assert;
