@@ -9,15 +9,15 @@ public class ArrangingCoins {
             return 0;
         }
 
-        for (int i = 2; i < n; ++i) {
-            int v = i * (i + 1) / 2;
-
-            if (v > n) {
-                return i - 1;
-            }
+        for (long i = (long)Math.ceil(Math.sqrt(n)); i < n; ++i) {
+            long v = i * (i + 1) / 2;
 
             if (v == n) {
-                return i;
+                return (int)i;
+            }
+
+            if (v > n) {
+                return (int)(i - 1);
             }
         }
 

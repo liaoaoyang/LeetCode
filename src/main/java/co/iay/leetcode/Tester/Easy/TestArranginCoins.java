@@ -34,4 +34,10 @@ public class TestArranginCoins {
     public void testArrangingCoinsCase5() {
         Assert.assertEquals(1, arrangingCoins.arrangeCoins(1));
     }
+
+    @Test
+    public void testArrangingCoinsCase6() {
+        Assert.assertEquals(60070, arrangingCoins.arrangeCoins(1804289383));
+    }
+
 }
