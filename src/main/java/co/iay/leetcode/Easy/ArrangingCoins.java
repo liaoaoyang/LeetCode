@@ -2,6 +2,7 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 16/11/1.
+ * https://leetcode.com/problems/arranging-coins/
  */
 public class ArrangingCoins {
     public int arrangeCoins(int n) {
