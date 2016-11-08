@@ -20,4 +20,13 @@ public class TestFindAllAnagramsInAString {
         r.add(6);
         Assert.assertEquals(r, t.findAnagrams("cbaebabacd", "abc"));
     }
+
+    @Test
+    public void testFindAllAnagramsInAStringCase2() {
+        List<Integer> r = new ArrayList<Integer>();
+        r.add(0);
+        r.add(1);
+        r.add(2);
+        Assert.assertEquals(r, t.findAnagrams("abab", "ab"));
+    }
 }

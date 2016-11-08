@@ -9,11 +9,11 @@ import java.util.List;
  */
 public class FindAllAnagramsInAString {
     public List<Integer> findAnagrams(String s, String p) {
-        if (s.length() < p.length()) {
-            return null;
-        }
-
         List<Integer> result = new ArrayList<Integer>();
+
+        if (s.length() < p.length()) {
+            return result;
+        }
 
         HashMap<String, Boolean> pMap = new HashMap<String, Boolean>();
 
@@ -21,7 +21,7 @@ public class FindAllAnagramsInAString {
             pMap.put(p.charAt(i) + "", true);
         }
 
-        for (int i = 0; i < s.length() - p.length(); ++i) {
+        for (int i = 0; i < s.length() - p.length() + 1; ++i) {
             String sChar = s.charAt(i) + "";
 
             if (!pMap.containsKey(sChar)) {
