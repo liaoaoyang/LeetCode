@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
-                Map<Integer, Integer> numIdxMap = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> numIdxMap = new HashMap<Integer, Integer>();
 
         for (int i = 0; i < nums.length; ++i) {
             numIdxMap.put(nums[i], i);
