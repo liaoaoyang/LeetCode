@@ -5,7 +5,7 @@ package co.iay.leetcode.Easy;
  * https://leetcode.com/problems/find-the-difference
  */
 public class FindTheDifference {
-    private static int LEN = 256;
+     final private static int LEN = 256;
 
     public char findTheDifference(String s, String t) {
         int[] ss = new int[LEN];
