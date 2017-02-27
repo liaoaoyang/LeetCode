@@ -1,5 +1,10 @@
 package co.iay.leetcode.DataStructures;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by ng on 16/6/13.
  */
@@ -8,11 +13,16 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
 
-    TreeNode(int x) {
+    public TreeNode(int x) {
         val = x;
     }
 
-    public static TreeNode buildTree(Integer[] list) {
+    public static TreeNode[] buildTreeArray(Integer[] list) {
+        return buildTreeArray(list, null);
+    }
+
+    @SuppressWarnings("Duplicates")
+    public static TreeNode[] buildTreeArray(Integer[] list, Map<Integer, TreeNode> idxNodeMap) {
         if (list.length == 0) {
             return null;
         }
@@ -49,9 +59,102 @@ public class TreeNode {
             }
 
             tree[j] = tmpTree[i];
+
+            if (idxNodeMap != null) {
+                idxNodeMap.put(i, tree[j]);
+            }
+
             ++j;
         }
 
+        return tree;
+    }
+
+    public static TreeNode buildTree(Integer[] list) {
+        TreeNode[] tree = buildTreeArray(list);
+
+        if (tree == null || tree.length == 0) {
+            return null;
+        }
+
         return tree[0];
+    }
+
+    public static Integer[] treeToArray(TreeNode root) {
+        return treeToArray(root, false);
+    }
+
+    public static Integer[] treeToArrayReverse(TreeNode root) {
+        return treeToArray(root, true);
+    }
+
+    @SuppressWarnings("Duplicates")
+    private static Integer[] treeToArray(TreeNode root, boolean reverse) {
+        if (root == null) {
+            return new Integer[] {};
+        }
+
+        List<TreeNode> l = new ArrayList<TreeNode>();
+        List<Integer> treeList = new ArrayList<Integer>();
+        l.add(root);
+        treeList.add(root.val);
+
+        int levelSize = 1;
+
+        while (true) {
+            levelSize *= 2;
+            Integer[] levelArray = new Integer[levelSize];
+
+            for (int levelArrayIdx = 0; levelArrayIdx < levelSize; ++levelArrayIdx) {
+                levelArray[levelArrayIdx] = null;
+            }
+
+            List<TreeNode> pl = l;
+            l = new ArrayList<TreeNode>();
+
+            int levelIdx = (reverse ? levelSize - 1 : 0);
+            int levelStep = (reverse ? -1 : 1);
+
+            boolean allNull = true;
+
+            for(TreeNode node : pl) {
+                if (node == null) {
+                    levelIdx += levelStep;
+                    l.add(null);
+                    levelIdx += levelStep;
+                    l.add(null);
+                    continue;
+                }
+
+                if (node.left != null) {
+                    l.add(node.left);
+                    levelArray[levelIdx] = node.left.val;
+                    allNull = false;
+                } else {
+                    l.add(null);
+                }
+
+                levelIdx += levelStep;
+
+                if (node.right != null) {
+                    l.add(node.right);
+                    levelArray[levelIdx] = node.right.val;
+                    allNull = false;
+                } else {
+                    l.add(null);
+                }
+
+                levelIdx += levelStep;
+            }
+
+            if (allNull) {
+                break;
+            }
+            else {
+                treeList.addAll(Arrays.asList(levelArray));
+            }
+        }
+
+        return treeList.toArray(new Integer[treeList.size()]);
     }
 }
