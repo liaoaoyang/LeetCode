@@ -9,6 +9,19 @@ import co.iay.leetcode.DataStructures.TreeNode;
  */
 public class InvertBinaryTree {
     public TreeNode invertTree(TreeNode root) {
-        return TreeNode.buildTree(TreeNode.treeToArrayReverse(root));
+        //return TreeNode.buildTree(TreeNode.treeToArrayReverse(root));
+        if (root == null) {
+            return null;
+        }
+
+        TreeNode lt = root.left;
+
+        root.left = root.right;
+        root.right = lt;
+
+        invertTree(root.left);
+        invertTree(root.right);
+
+        return root;
     }
 }
