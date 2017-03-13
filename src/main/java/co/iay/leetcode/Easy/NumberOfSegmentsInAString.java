@@ -6,11 +6,11 @@ package co.iay.leetcode.Easy;
  * https://leetcode.com/problems/number-of-segments-in-a-string
  */
 public class NumberOfSegmentsInAString {
-    final private int STATUS_INIT      = 0;
-    final private int STATUS_SPACE     = 1;
-    final private int STATUS_NON_SPACE = 2;
-
     public int countSegments(String s) {
+        final int STATUS_INIT      = 0;
+        final int STATUS_SPACE     = 1;
+        final int STATUS_NON_SPACE = 2;
+
         int len = s.length();
         int seg = 0;
         int status = STATUS_INIT;
