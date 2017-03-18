@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * Created by ng on 16/9/10.
+ * 378. Kth Smallest Element in a Sorted Matrix
+ * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix
  */
 public class KthSmallestElementInASortedMatrix {
     private static int MODE_HORIZONTAL = 1;
@@ -58,7 +60,40 @@ public class KthSmallestElementInASortedMatrix {
         return smallest.get(k - 1);
     }
 
+    private static int binarySearchSolution(int[][] matrix, int k) {
+        int matrixLength = matrix.length;
+        int L = matrix[0][0];
+        int R = matrix[matrixLength - 1][matrixLength - 1];
+
+        while (L < R) {
+            int mid = L + ((R - L) / 2);
+            int temp = searchLowerThanMid(matrix, matrixLength, mid);
+
+            if (temp < k) {
+                L = mid + 1;
+            }
+            else {
+                R = mid;
+            }
+        }
+
+        return L;
+    }
+
+    private static int searchLowerThanMid(int[][] matrix, int n, int x) {
+        int i = n - 1, j = 0, cnt = 0;
+        while (i >= 0 && j < n) {
+            if (matrix[i][j] <= x) {
+                j++;
+                cnt += i + 1;
+            }
+
+            else i--;
+        }
+        return cnt;
+    }
+
     public int kthSmallest(int[][] matrix, int k) {
-        return TLESolution(matrix, k);
+        return binarySearchSolution(matrix, k);
     }
 }
