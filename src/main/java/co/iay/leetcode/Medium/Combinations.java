@@ -32,22 +32,6 @@ public class Combinations {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         getCombinations(result, n, k, 1, k, new Integer[k]);
 
-        /*
-        for (int jj = 0; jj < result.size(); ++jj) {
-            System.out.print("cmp.add(Arrays.asList(");
-
-            for(int j = 0; j < result.get(jj).size(); ++j) {
-                System.out.printf("%s", result.get(jj).get(j));
-
-                if (j < result.get(jj).size() - 1) {
-                    System.out.print(", ");
-                }
-            }
-
-            System.out.println("));");
-        }
-        */
-
         return result;
     }
 }
