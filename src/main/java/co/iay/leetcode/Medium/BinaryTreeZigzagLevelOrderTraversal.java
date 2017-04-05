@@ -38,26 +38,22 @@ public class BinaryTreeZigzagLevelOrderTraversal {
                     continue;
                 }
 
+                int insertIdx = (levelCount % 2 == 0 ? 0 : treeLevel.size());
+
                 if (node.left != null) {
                     l.add(node.left);
                     allNull = false;
-                    if (levelCount % 2 == 0) {
-                        treeLevel.add(0, node.left.val);
-                    } else {
-                        treeLevel.add(node.left.val);
-                    }
+                    treeLevel.add(insertIdx, node.left.val);
                 } else {
                     l.add(null);
                 }
 
+                insertIdx = (levelCount % 2 == 0 ? 0 : treeLevel.size());
+
                 if (node.right != null) {
                     l.add(node.right);
                     allNull = false;
-                    if (levelCount % 2 == 0) {
-                        treeLevel.add(0, node.right.val);
-                    } else {
-                        treeLevel.add(node.right.val);
-                    }
+                    treeLevel.add(insertIdx, node.right.val);
                 } else {
                     l.add(null);
                 }
