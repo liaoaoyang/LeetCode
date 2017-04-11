@@ -1,4 +1,4 @@
-package co.iay.leetcode.Medium;
+package co.iay.leetcode.Tester.Easy;
 
 import co.iay.leetcode.Easy.RestoreIPAddresses;
 import org.junit.Assert;
