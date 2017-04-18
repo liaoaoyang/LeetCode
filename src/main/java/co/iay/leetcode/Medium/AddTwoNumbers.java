@@ -1,6 +1,7 @@
 package co.iay.leetcode.Medium;
 
 /**
+ * 2. Add Two Numbers
  * https://leetcode.com/problems/add-two-numbers/
  */
 
@@ -34,7 +35,6 @@ public class AddTwoNumbers {
 
         Map<Integer, Integer> longer = (lm1.size() > lm2.size() ? lm1 : lm2);
         Map<Integer, Integer> shorter = (lm1.size() <= lm2.size() ? lm1 : lm2);
-        int lengthGap = longer.size() - shorter.size();
 
         ListNode result = new ListNode(0);
         ListNode resultRef = result;
