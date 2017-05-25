@@ -12,8 +12,8 @@ import java.util.List;
  */
 public class SortCharactersByFrequency {
     private class CharFreq {
-        public char character = 0;
-        public int frequency = 0;
+        char character = 0;
+        int frequency = 0;
     }
 
     private Comparator<CharFreq> cmp = new Comparator<CharFreq>() {
