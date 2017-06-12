@@ -42,5 +42,14 @@ public class ListNode {
 
         return r;
     }
+
+    public static Integer[] buildArrayByList(ListNode l) {
+        if (null == l) {
+            return null;
+        }
+
+        List<Integer> li = buildArrayListByList(l);
+        return li.toArray(new Integer[li.size()]);
+    }
 }
 
