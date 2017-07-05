@@ -34,4 +34,9 @@ public class TestSumOfSquareNumbers {
     public void testSumOfSquareNumbersCase5() {
         Assert.assertEquals(false, s.judgeSquareSum(Integer.MAX_VALUE));
     }
+
+    @Test
+    public void testSumOfSquareNumbersCase6() {
+        Assert.assertEquals(true, s.judgeSquareSum(2));
+    }
 }
