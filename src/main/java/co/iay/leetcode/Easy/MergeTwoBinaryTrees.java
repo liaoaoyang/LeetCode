@@ -18,7 +18,7 @@ public class MergeTwoBinaryTrees {
 
         int t2Val = 0;
 
-        if (null == t1 && null != t2) {
+        if (null == t1) {
             TreeNode node = new TreeNode(0);
 
             if (LEFT == dir1) {

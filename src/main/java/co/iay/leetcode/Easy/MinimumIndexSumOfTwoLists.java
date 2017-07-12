@@ -32,15 +32,15 @@ public class MinimumIndexSumOfTwoLists {
         ArrayList<String> r = new ArrayList<String>();
         int minDiff = Integer.MAX_VALUE;
 
-        for (int i = 0; i < shorter.length; ++i) {
-            if (m.get(shorter[i]) >= 0 && m.get(shorter[i]) < minDiff) {
-               minDiff =  m.get(shorter[i]);
+        for (String aShorter : shorter) {
+            if (m.get(aShorter) >= 0 && m.get(aShorter) < minDiff) {
+                minDiff = m.get(aShorter);
             }
         }
 
-        for (int i = 0; i < shorter.length; ++i) {
-            if (m.get(shorter[i]) == minDiff) {
-                r.add(shorter[i]);
+        for (String aShorter : shorter) {
+            if (m.get(aShorter) == minDiff) {
+                r.add(aShorter);
             }
         }
 
