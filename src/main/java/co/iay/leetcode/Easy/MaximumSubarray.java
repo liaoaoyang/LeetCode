@@ -2,25 +2,30 @@ package co.iay.leetcode.Easy;
 
 /**
  * Created by ng on 17/3/17.
+ * 53. Maximum Subarray
+ * https://leetcode.com/problems/maximum-subarray/
  */
 public class MaximumSubarray {
-    public int maxSubArray(int[] nums) {
-        int[][] tempSum = new int[nums.length][nums.length];
-        int[] tempMax = new int[nums.length];
+    private int oNSolution(int[] nums) {
+        int result = Integer.MIN_VALUE;
+        int sum = 0;
 
-        for (int i = 0; i < nums.length; ++i) {
-            for (int j = i; j < nums.length; ++j) {
-                tempSum[i][j] = (j == i ? nums[j] : nums[j] + tempSum[i][j - 1]);
-                tempMax[i] = (j == i || tempMax[i] < nums[i] ? nums[i] : (tempSum[i][j]> tempMax[i] ? tempSum[i][j] : tempMax[i]));
+        for (int n : nums) {
+            sum += n;
+
+            if (sum > result) {
+                result = sum;
+            }
+
+            if (sum < 0) {
+                sum = 0;
             }
         }
 
-        int result = Integer.MIN_VALUE;
-
-        for (int s : tempMax) {
-            result = (result > s ? result : s);
-        }
-
         return result;
+    }
+
+    public int maxSubArray(int[] nums) {
+        return oNSolution(nums);
     }
 }
