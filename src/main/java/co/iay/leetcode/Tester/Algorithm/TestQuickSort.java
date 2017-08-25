@@ -10,6 +10,10 @@ import java.util.List;
 
 public class TestQuickSort {
     private void testQuickSortOfArrayWithSize(int arraySize) {
+        testQuickSortOfArrayWithSize(arraySize, false);
+    }
+    private void testQuickSortOfArrayWithSize(int arraySize, boolean printTime) {
+        System.out.print(printTime ? "=========> QuickSort begin <=========\n" : "");
         Integer[] result = new Integer[arraySize];
 
         for (int i = 0; i < result.length; ++i) {
@@ -25,24 +29,31 @@ public class TestQuickSort {
         List<Integer> arrayList = Arrays.asList(array);
 
         Collections.shuffle(arrayList);
-        arrayList.toArray(array);
-        QuickSort.recursiveSort(array);
-        Assert.assertArrayEquals(result, array);
+        Integer[] array1 = arrayList.toArray(new Integer[arraySize]);
+        long beginTime = System.nanoTime();
+        QuickSort.recursiveSort(array1);
+        System.out.print(printTime ? "QuickSort.recursiveSort used " + (System.nanoTime() - beginTime) + "\n" : "");
+        Assert.assertArrayEquals(result, array1);
 
-        Collections.shuffle(arrayList);
-        arrayList.toArray(array);
-        QuickSort.recursiveSortByRandomPickPivot(array);
-        Assert.assertArrayEquals(result, array);
+        Integer[] array2 = arrayList.toArray(new Integer[arraySize]);
+        beginTime = System.nanoTime();
+        QuickSort.recursiveSortByRandomPickPivot(array2);
+        System.out.print(printTime ? "QuickSort.recursiveSortByRandomPickPivot used " + (System.nanoTime() - beginTime) + "\n" : "");
+        Assert.assertArrayEquals(result, array2);
 
-        Collections.shuffle(arrayList);
-        arrayList.toArray(array);
-        QuickSort.nonRecursiveSort(array);
-        Assert.assertArrayEquals(result, array);
+        Integer[] array3 = arrayList.toArray(new Integer[arraySize]);
+        beginTime = System.nanoTime();
+        QuickSort.nonRecursiveSort(array3);
+        System.out.print(printTime ? "QuickSort.nonRecursiveSort used " + (System.nanoTime() - beginTime) + "\n" : "");
+        Assert.assertArrayEquals(result, array3);
 
-        Collections.shuffle(arrayList);
-        arrayList.toArray(array);
-        QuickSort.nonRecursiveSortByRandomPickPivot(array);
-        Assert.assertArrayEquals(result, array);
+        Integer[] array4 = arrayList.toArray(new Integer[arraySize]);
+        beginTime = System.nanoTime();
+        QuickSort.nonRecursiveSortByRandomPickPivot(array4);
+        System.out.print(printTime ? "QuickSort.nonRecursiveSortByRandomPickPivot used " + (System.nanoTime() - beginTime) + "\n" : "");
+        Assert.assertArrayEquals(result, array4);
+
+        System.out.print(printTime ? "==========> QuickSort end <==========\n" : "");
     }
 
     @Test
@@ -76,6 +87,4 @@ public class TestQuickSort {
         QuickSort.swap(array, 0, 1);
         Assert.assertArrayEquals(new Integer[]{1, 2}, array);
     }
-
-
 }
