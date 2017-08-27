@@ -5,7 +5,7 @@ package co.iay.leetcode.Easy;
  * https://leetcode.com/problems/find-the-difference
  */
 public class FindTheDifference {
-     final private static int LEN = 256;
+    final private static int LEN = 256;
 
     public char findTheDifference(String s, String t) {
         int[] ss = new int[LEN];
@@ -17,20 +17,20 @@ public class FindTheDifference {
         }
 
         for (int i = 0; i < s.length(); ++i) {
-            int code = (int)(s.charAt(i) - '\0');
+            int code = (int) (s.charAt(i) - '\0');
 
             ++ss[code];
         }
 
         for (int i = 0; i < t.length(); ++i) {
-            int code = (int)(t.charAt(i) - '\0');
+            int code = (int) (t.charAt(i) - '\0');
 
             ++tt[code];
         }
 
         for (int i = 0; i < LEN; ++i) {
             if (ss[i] != tt[i]) {
-                return (char)i;
+                return (char) i;
             }
         }
 

@@ -20,7 +20,7 @@ public class AddStrings {
                 over = longer.charAt(longerIdx) - '0' + over;
             }
 
-            result =  (over % 10) + result;
+            result = (over % 10) + result;
             over /= 10;
         }
 

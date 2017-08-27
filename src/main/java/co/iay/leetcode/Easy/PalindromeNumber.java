@@ -14,7 +14,7 @@ public class PalindromeNumber {
             return x;
         }
 
-        return (x % 10) * (int)Math.pow(10, len(x) - 1) + reverse(x / 10);
+        return (x % 10) * (int) Math.pow(10, len(x) - 1) + reverse(x / 10);
     }
 
     public boolean isPalindrome(int x) {

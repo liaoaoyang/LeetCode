@@ -24,7 +24,9 @@ public class ShuffleAnArray {
         random = new Random();
     }
 
-    /** Resets the array to its original configuration and return it. */
+    /**
+     * Resets the array to its original configuration and return it.
+     */
     public int[] reset() {
         if (oriNums == null || shuffledNums == null) {
             return null;
@@ -37,7 +39,9 @@ public class ShuffleAnArray {
         return shuffledNums;
     }
 
-    /** Returns a random shuffling of the array. */
+    /**
+     * Returns a random shuffling of the array.
+     */
     public int[] shuffle() {
         for (int i = 0; i < shuffledNums.length; ++i) {
             int idx = random.nextInt(i + 1);

@@ -9,7 +9,10 @@ import java.util.List;
 public class ListNode {
     public int val;
     public ListNode next;
-    public ListNode(int x) { val = x; }
+
+    public ListNode(int x) {
+        val = x;
+    }
 
     public static ListNode buildListNodeByArray(Integer[] arr) {
         ListNode l = null;

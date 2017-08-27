@@ -12,7 +12,7 @@ public class IsSubSequence {
             return true;
         }
 
-        for (; i < s.length() && j < t.length();) {
+        for (; i < s.length() && j < t.length(); ) {
             char sc = s.charAt(i);
 
             for (; j < t.length(); ++j) {

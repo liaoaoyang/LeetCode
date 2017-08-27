@@ -30,7 +30,7 @@ public class MergeTwoBinaryTrees {
             t1 = node;
         }
 
-        if (null != t2){
+        if (null != t2) {
             t2Val = t2.val;
         }
 

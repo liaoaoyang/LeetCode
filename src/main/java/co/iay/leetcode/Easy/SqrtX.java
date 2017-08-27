@@ -15,7 +15,7 @@ public class SqrtX {
             middleSquare = middle * middle;
 
             if (middleSquare == x) {
-                return (int)middle;
+                return (int) middle;
             }
 
             if (middleSquare > x) {
@@ -26,6 +26,6 @@ public class SqrtX {
             left = middle + 1;
         }
 
-        return (int)right;
+        return (int) right;
     }
 }

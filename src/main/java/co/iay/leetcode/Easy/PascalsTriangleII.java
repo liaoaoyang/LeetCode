@@ -30,7 +30,7 @@ public class PascalsTriangleII {
                 continue;
             }
 
-            for (int j = 0 ; j < prev.size() - 1; ++j) {
+            for (int j = 0; j < prev.size() - 1; ++j) {
                 now.add(prev.get(j) + prev.get(j + 1));
             }
 

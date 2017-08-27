@@ -5,7 +5,7 @@ package co.iay.leetcode.Hard;
  * https://leetcode.com/problems/median-of-two-sorted-arrays/
  */
 public class MedianOfTwoSortedArrays {
-	private static final int ASC = 0;
+    private static final int ASC = 0;
     private static final int DESC = 1;
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
@@ -23,7 +23,7 @@ public class MedianOfTwoSortedArrays {
         int nums2order = (nums2.length >= 2 && nums2[0] > nums2[1]) ? DESC : ASC;
         int mergedIdx = 0;
 
-        for (;i < nums1.length || j < nums2.length;) {
+        for (; i < nums1.length || j < nums2.length; ) {
             int realI = (nums1order == ASC ? i : nums1.length - i - 1);
             int realJ = (nums2order == ASC ? j : nums2.length - j - 1);
 

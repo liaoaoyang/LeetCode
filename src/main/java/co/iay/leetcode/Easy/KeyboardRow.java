@@ -9,10 +9,10 @@ import java.util.HashMap;
  * https://leetcode.com/problems/keyboard-row/
  */
 public class KeyboardRow {
-     final private static int MODE_NONE = 0;
-     final private static int MODE_Q = 1;
-     final private static int MODE_A = 2;
-     final private static int MODE_Z = 3;
+    final private static int MODE_NONE = 0;
+    final private static int MODE_Q = 1;
+    final private static int MODE_A = 2;
+    final private static int MODE_Z = 3;
 
     private static boolean str2Map(String str, HashMap<Character, Boolean> m) {
         for (char c : str.toCharArray()) {

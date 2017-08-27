@@ -19,11 +19,11 @@ public class SortCharactersByFrequency {
     private Comparator<CharFreq> cmp = new Comparator<CharFreq>() {
         @Override
         public int compare(CharFreq o1, CharFreq o2) {
-        if (o1.frequency == o2.frequency) {
-            return 0;
-        }
+            if (o1.frequency == o2.frequency) {
+                return 0;
+            }
 
-        return o1.frequency < o2.frequency ? 1 : -1;
+            return o1.frequency < o2.frequency ? 1 : -1;
         }
     };
 

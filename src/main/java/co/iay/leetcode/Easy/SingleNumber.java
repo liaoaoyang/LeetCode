@@ -9,7 +9,7 @@ public class SingleNumber {
     public int singleNumber(int[] nums) {
         HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
 
-        for(int i = 0; i < nums.length; ++i) {
+        for (int i = 0; i < nums.length; ++i) {
             if (m.containsKey(nums[i])) {
                 m.put(nums[i], m.get(nums[i]) + 1);
                 continue;
@@ -19,7 +19,7 @@ public class SingleNumber {
 
         }
 
-        for(int i = 0; i < nums.length; ++i) {
+        for (int i = 0; i < nums.length; ++i) {
             if (m.get(nums[i]) == 1) {
                 return nums[i];
             }

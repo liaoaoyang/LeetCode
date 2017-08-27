@@ -11,7 +11,7 @@ public class FirstBadVersion extends VersionControl {
         int end = n;
 
         while (start < end) {
-            int nowVersion = (int)(((long)start + (long)end) / 2);
+            int nowVersion = (int) (((long) start + (long) end) / 2);
 
             if (this.isBadVersion(nowVersion)) {
                 end = nowVersion;

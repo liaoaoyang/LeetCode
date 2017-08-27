@@ -5,8 +5,7 @@ package co.iay.leetcode.Easy;
  */
 public class Base7 {
     public String convertToBase7(int num) {
-        if (0 == num)
-        {
+        if (0 == num) {
             return "0";
         }
 

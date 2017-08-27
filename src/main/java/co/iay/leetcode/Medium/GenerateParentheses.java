@@ -15,19 +15,19 @@ public class GenerateParentheses {
 
         if (leftPLeft > 0) {
             generateParenthesis(
-                result,
-                leftPLeft - 1,
-                rightPLeft,
-                s + "("
+                    result,
+                    leftPLeft - 1,
+                    rightPLeft,
+                    s + "("
             );
         }
 
         if (s.length() != 0 && (rightPLeft > leftPLeft)) {
             generateParenthesis(
-                result,
-                leftPLeft,
-                rightPLeft - 1,
-                s + ")"
+                    result,
+                    leftPLeft,
+                    rightPLeft - 1,
+                    s + ")"
             );
         }
     }

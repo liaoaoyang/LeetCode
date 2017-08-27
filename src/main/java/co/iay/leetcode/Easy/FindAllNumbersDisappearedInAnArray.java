@@ -14,13 +14,13 @@ public class FindAllNumbersDisappearedInAnArray {
             rNums[i - 1] = i;
         }
 
-        for (int n: nums) {
+        for (int n : nums) {
             rNums[n - 1] = 0;
         }
 
         List<Integer> r = new ArrayList<Integer>();
 
-        for (int i: rNums) {
+        for (int i : rNums) {
             if (i != 0) {
                 r.add(i);
             }

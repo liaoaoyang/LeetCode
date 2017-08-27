@@ -4,8 +4,8 @@ package co.iay.leetcode.Easy;
  * Created by ng on 17/1/28.
  */
 public class IslandPerimeter {
-     final private static int DIR_HORIZONTAL = 0;
-     final private static int DIR_VERTICAL   = 1;
+    final private static int DIR_HORIZONTAL = 0;
+    final private static int DIR_VERTICAL = 1;
 
     private static int countWithDirection(int[][] grid, int dir) {
         int result = 0;

@@ -4,8 +4,8 @@ package co.iay.leetcode.Easy;
  * Created by ng on 17/1/23.
  */
 public class MaxConsecutiveOnes {
-     final private static int STATUS_ZERO = 0;
-     final private static int STATUS_ONE  = 1;
+    final private static int STATUS_ZERO = 0;
+    final private static int STATUS_ONE = 1;
 
     public int findMaxConsecutiveOnes(int[] nums) {
         int nowConsecutiveOnesCount = 0;

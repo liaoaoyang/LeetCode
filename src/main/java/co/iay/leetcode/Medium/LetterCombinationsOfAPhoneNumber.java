@@ -9,17 +9,17 @@ import java.util.List;
  * https://leetcode.com/problems/letter-combinations-of-a-phone-number/
  */
 public class LetterCombinationsOfAPhoneNumber {
-    private static char[][] digitsCharsMap = new char[][] {
-            new char[] {},
-            new char[] {},
-            new char[] {'a', 'b', 'c'},
-            new char[] {'d', 'e', 'f'},
-            new char[] {'g', 'h', 'i'},
-            new char[] {'j', 'k', 'l'},
-            new char[] {'m', 'n', 'o'},
-            new char[] {'p', 'q', 'r', 's'},
-            new char[] {'t', 'u', 'v'},
-            new char[] {'w', 'x', 'y', 'z'},
+    private static char[][] digitsCharsMap = new char[][]{
+            new char[]{},
+            new char[]{},
+            new char[]{'a', 'b', 'c'},
+            new char[]{'d', 'e', 'f'},
+            new char[]{'g', 'h', 'i'},
+            new char[]{'j', 'k', 'l'},
+            new char[]{'m', 'n', 'o'},
+            new char[]{'p', 'q', 'r', 's'},
+            new char[]{'t', 'u', 'v'},
+            new char[]{'w', 'x', 'y', 'z'},
     };
 
     private void build(String s, List<String> result, char[] c, int index) {

@@ -31,7 +31,7 @@ public class BinaryTreeLevelOrderTraversal {
 
             boolean allNull = true;
 
-            for(TreeNode node : pl) {
+            for (TreeNode node : pl) {
                 if (node == null) {
                     continue;
                 }
@@ -55,8 +55,7 @@ public class BinaryTreeLevelOrderTraversal {
 
             if (allNull) {
                 break;
-            }
-            else {
+            } else {
                 result.add(treeLevel);
             }
         }

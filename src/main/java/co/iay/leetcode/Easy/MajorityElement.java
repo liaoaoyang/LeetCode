@@ -18,7 +18,7 @@ public class MajorityElement {
         }
 
         for (Integer k : m.keySet()) {
-            if (m.get(k) > (int)Math.floor(nums.length / 2.0)) {
+            if (m.get(k) > (int) Math.floor(nums.length / 2.0)) {
                 return k;
             }
         }

@@ -71,8 +71,7 @@ public class KthSmallestElementInASortedMatrix {
 
             if (temp < k) {
                 L = mid + 1;
-            }
-            else {
+            } else {
                 R = mid;
             }
         }
@@ -86,9 +85,7 @@ public class KthSmallestElementInASortedMatrix {
             if (matrix[i][j] <= x) {
                 j++;
                 cnt += i + 1;
-            }
-
-            else i--;
+            } else i--;
         }
         return cnt;
     }

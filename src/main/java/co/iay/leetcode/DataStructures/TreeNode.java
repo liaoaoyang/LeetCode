@@ -91,7 +91,7 @@ public class TreeNode {
     @SuppressWarnings("Duplicates")
     private static Integer[] treeToArray(TreeNode root, boolean reverse) {
         if (root == null) {
-            return new Integer[] {};
+            return new Integer[]{};
         }
 
         List<TreeNode> l = new ArrayList<TreeNode>();
@@ -117,7 +117,7 @@ public class TreeNode {
 
             boolean allNull = true;
 
-            for(TreeNode node : pl) {
+            for (TreeNode node : pl) {
                 if (node == null) {
                     levelIdx += levelStep;
                     l.add(null);
@@ -149,8 +149,7 @@ public class TreeNode {
 
             if (allNull) {
                 break;
-            }
-            else {
+            } else {
                 treeList.addAll(Arrays.asList(levelArray));
             }
         }

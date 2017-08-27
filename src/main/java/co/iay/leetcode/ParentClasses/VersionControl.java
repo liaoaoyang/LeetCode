@@ -9,7 +9,7 @@ public class VersionControl {
 
     public void init(int n) {
         this.versions = n;
-        this.badVersion = (int)(Math.random()  * n);
+        this.badVersion = (int) (Math.random() * n);
         this.badVersion = this.badVersion <= 0 ? 1 : this.badVersion;
     }
 

@@ -22,7 +22,7 @@ public class RomanToInteger {
             return romanIntMap.get(s);
         }
 
-        for(int i = s.length() - 1; i >= 0; --i) {
+        for (int i = s.length() - 1; i >= 0; --i) {
             String now = s.substring(i, i + 1);
             int nowNum = romanIntMap.get(now);
 

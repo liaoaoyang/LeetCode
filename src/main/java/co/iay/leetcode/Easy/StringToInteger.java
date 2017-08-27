@@ -53,7 +53,7 @@ public class StringToInteger {
                 }
             }
 
-            result = result + factor * nowNum * (int)Math.pow(10, pos - 1);
+            result = result + factor * nowNum * (int) Math.pow(10, pos - 1);
         }
 
         return result;

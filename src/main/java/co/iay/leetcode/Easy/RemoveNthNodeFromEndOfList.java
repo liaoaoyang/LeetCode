@@ -15,7 +15,7 @@ public class RemoveNthNodeFromEndOfList {
         ListNode it = head;
         int i = 1;
 
-        for(; it != null; it = it.next, ++i) {
+        for (; it != null; it = it.next, ++i) {
             idxListMap.put(i, it);
         }
 

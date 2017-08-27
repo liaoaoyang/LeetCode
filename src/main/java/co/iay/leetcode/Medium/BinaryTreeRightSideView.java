@@ -28,7 +28,7 @@ public class BinaryTreeRightSideView {
 
             boolean allNull = true;
 
-            for(TreeNode node : pl) {
+            for (TreeNode node : pl) {
                 if (node == null) {
                     continue;
                 }
@@ -46,8 +46,7 @@ public class BinaryTreeRightSideView {
 
             if (allNull) {
                 break;
-            }
-            else {
+            } else {
                 result.add(l.get(l.size() - 1).val);
             }
         }

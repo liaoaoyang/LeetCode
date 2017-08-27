@@ -15,6 +15,6 @@ public class ValidAnagram {
         Arrays.sort(tChars);
         String tSorted = new String(tChars);
 
-        return  sSorted.equals(tSorted);
+        return sSorted.equals(tSorted);
     }
 }

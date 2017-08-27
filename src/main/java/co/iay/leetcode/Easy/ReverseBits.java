@@ -27,6 +27,6 @@ public class ReverseBits {
             }
         }
 
-        return (int)result;
+        return (int) result;
     }
 }

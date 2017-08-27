@@ -31,20 +31,20 @@ public class BinaryWatch {
     public List<String> readBinaryWatch(int num) {
         List<String> r = new ArrayList<String>();
 
-        for (int hourNum = 0; hourNum <= 4 && hourNum <= num ; ++hourNum) {
+        for (int hourNum = 0; hourNum <= 4 && hourNum <= num; ++hourNum) {
             int minuteNum = num - hourNum;
             Map<String, Boolean> hours = new HashMap<String, Boolean>();
             pickTime(hourNum, HOURS, 0, hours, 0, 11, "%d");
             Map<String, Boolean> minutes = new HashMap<String, Boolean>();
-            pickTime(minuteNum, MINUTES, 0, minutes, 0, 59,"%02d");
+            pickTime(minuteNum, MINUTES, 0, minutes, 0, 59, "%02d");
 
-            for (Map.Entry<String, Boolean> h  : hours.entrySet()) {
+            for (Map.Entry<String, Boolean> h : hours.entrySet()) {
                 for (Map.Entry<String, Boolean> m : minutes.entrySet()) {
                     r.add(h.getKey() + ":" + m.getKey());
                 }
             }
         }
 
-        return  r;
+        return r;
     }
 }

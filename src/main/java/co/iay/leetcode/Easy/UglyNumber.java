@@ -18,7 +18,7 @@ public class UglyNumber {
 
         int n = num;
 
-        for (int factor: factors) {
+        for (int factor : factors) {
             while (0 == n % factor) {
                 n /= factor;
 

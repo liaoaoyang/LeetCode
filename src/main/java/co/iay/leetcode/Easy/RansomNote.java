@@ -11,7 +11,7 @@ public class RansomNote {
         int[] rCounter = new int[COUNTER_LENGTH];
         int[] mCounter = new int[COUNTER_LENGTH];
 
-        for(int i = 0; i < COUNTER_LENGTH; ++i) {
+        for (int i = 0; i < COUNTER_LENGTH; ++i) {
             rCounter[i] = 0;
             mCounter[i] = 0;
         }

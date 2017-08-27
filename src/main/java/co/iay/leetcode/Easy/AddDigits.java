@@ -9,7 +9,7 @@ public class AddDigits {
         int now = num;
         int result = 0;
 
-        while (now >= 10){
+        while (now >= 10) {
             while (now > 0) {
                 result += (now % 10);
                 now /= 10;

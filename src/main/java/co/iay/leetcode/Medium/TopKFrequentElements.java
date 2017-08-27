@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class TopKFrequentElements {
     private class Frequency {
-        public int value     = 0;
+        public int value = 0;
         public int frequency = 0;
 
         public Frequency(int value, int frequency) {

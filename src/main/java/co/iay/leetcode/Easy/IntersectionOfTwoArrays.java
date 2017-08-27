@@ -13,11 +13,11 @@ public class IntersectionOfTwoArrays {
         HashMap<Integer, Integer> r = new HashMap<Integer, Integer>();
         HashMap<Integer, Integer> n1 = new HashMap<Integer, Integer>();
 
-        for (int i: longer) {
+        for (int i : longer) {
             n1.put(i, 1);
         }
 
-        for (int i: shorter) {
+        for (int i : shorter) {
             if (n1.containsKey(i)) {
                 r.put(i, 1);
             }

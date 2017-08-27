@@ -17,6 +17,6 @@ public class NthDigit {
         }
 
         numStart += ((n - 1) / numLen);
-        return (numStart + "").charAt((int)((n - 1) % numLen)) - '0';
+        return (numStart + "").charAt((int) ((n - 1) % numLen)) - '0';
     }
 }

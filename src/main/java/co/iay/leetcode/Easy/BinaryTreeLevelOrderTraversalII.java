@@ -29,7 +29,7 @@ public class BinaryTreeLevelOrderTraversalII {
             List<TreeNode> pl = l;
             l = new ArrayList<TreeNode>();
 
-            for(TreeNode node : pl) {
+            for (TreeNode node : pl) {
                 if (node.left != null) {
                     l.add(node.left);
                 }

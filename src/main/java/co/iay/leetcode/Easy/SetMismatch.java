@@ -14,7 +14,7 @@ public class SetMismatch {
             ++numCount[n - 1];
         }
 
-        for(int i = 0; i < nums.length; ++i) {
+        for (int i = 0; i < nums.length; ++i) {
             if (numCount[i] == 2) {
                 result[0] = i + 1;
                 continue;

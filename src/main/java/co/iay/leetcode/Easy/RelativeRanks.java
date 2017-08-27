@@ -16,7 +16,7 @@ public class RelativeRanks {
     public String[] findRelativeRanks(int[] nums) {
         int[] n = new int[nums.length];
 
-        for (int i = 0; i < nums.length ; ++i) {
+        for (int i = 0; i < nums.length; ++i) {
             n[i] = nums[i];
         }
 
@@ -24,13 +24,13 @@ public class RelativeRanks {
 
         HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
 
-        for (int i = 0; i < n.length ; ++i) {
+        for (int i = 0; i < n.length; ++i) {
             m.put(n[i], i);
         }
 
         String[] result = new String[nums.length];
 
-        for (int i = 0; i < nums.length ; ++i) {
+        for (int i = 0; i < nums.length; ++i) {
             int p = m.get(nums[i]);
 
             if (p == nums.length - 1) {

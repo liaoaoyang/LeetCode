@@ -30,7 +30,7 @@ public class AverageOfLevelsInBinaryTree {
             List<TreeNode> pl = l;
             l = new ArrayList<TreeNode>();
 
-            for(TreeNode node : pl) {
+            for (TreeNode node : pl) {
                 if (node == null) {
                     continue;
                 }

@@ -5,12 +5,12 @@ package co.iay.leetcode.Medium;
  * https://leetcode.com/problems/sort-colors/
  */
 public class SortColors {
-    final static public int COLOR_RED   = 0;
+    final static public int COLOR_RED = 0;
     final static public int COLOR_WHITE = 1;
-    final static public int COLOR_BLUE  = 2;
+    final static public int COLOR_BLUE = 2;
 
     public void sortColors(int[] nums) {
-        int[] colors = new int[] {COLOR_RED, COLOR_WHITE, COLOR_BLUE};
+        int[] colors = new int[]{COLOR_RED, COLOR_WHITE, COLOR_BLUE};
         int[] result = new int[nums.length];
         int index = 0;
 

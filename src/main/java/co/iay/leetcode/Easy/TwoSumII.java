@@ -10,13 +10,14 @@ public class TwoSumII {
 
         while (s != e) {
             int sum = numbers[s] + numbers[e];
+            int mid = (s + e) / 2;
 
             if (sum > target) {
-                --e;
+                e = mid - 1;
             } else if (sum < target) {
-                ++s;
+                s = mid + 1;
             } else {
-                return new int[] {s + 1, e + 1};
+                return new int[]{s + 1, e + 1};
             }
         }
 

@@ -14,7 +14,7 @@ public class IntersectionOfTwoArraysII {
         HashMap<Integer, Integer> n1 = new HashMap<Integer, Integer>();
         HashMap<Integer, Integer> n2 = new HashMap<Integer, Integer>();
 
-        for (int i: longer) {
+        for (int i : longer) {
             if (n1.containsKey(i)) {
                 n1.put(i, n1.get(i) + 1);
             } else {
@@ -22,7 +22,7 @@ public class IntersectionOfTwoArraysII {
             }
         }
 
-        for (int i: shorter) {
+        for (int i : shorter) {
             if (n2.containsKey(i)) {
                 n2.put(i, n2.get(i) + 1);
             } else {
@@ -32,7 +32,7 @@ public class IntersectionOfTwoArraysII {
 
         int resultLength = 0;
 
-        for (int i: shorter) {
+        for (int i : shorter) {
             if (n1.containsKey(i)) {
                 r.put(i, Math.min(n1.get(i), n2.get(i)));
             }

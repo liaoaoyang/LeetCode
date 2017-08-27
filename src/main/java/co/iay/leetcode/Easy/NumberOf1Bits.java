@@ -16,9 +16,9 @@ public class NumberOf1Bits {
 
         while (unsignedN > 0) {
             for (int pos = maxPos; pos >= 0; --pos) {
-                if (((long)1<<pos) <= unsignedN) {
+                if (((long) 1 << pos) <= unsignedN) {
                     ++num;
-                    unsignedN -= ((long)1<<pos);
+                    unsignedN -= ((long) 1 << pos);
                     maxPos = pos - 1;
                     break;
                 }

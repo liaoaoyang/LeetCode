@@ -33,7 +33,7 @@ public class NumberOfBoomerangs {
                 }
             }
 
-            for(Map.Entry<Integer, Integer> entry : m.entrySet()){
+            for (Map.Entry<Integer, Integer> entry : m.entrySet()) {
                 int val = entry.getValue();
                 result += (val * (val - 1));
             }

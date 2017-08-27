@@ -14,7 +14,7 @@ public class ConvertANumberToHexadecimal {
             if (mod < 10) {
                 hex = mod + hex;
             } else {
-                hex = (char)((mod - 10) + 'a') + hex;
+                hex = (char) ((mod - 10) + 'a') + hex;
             }
 
             n /= 16;

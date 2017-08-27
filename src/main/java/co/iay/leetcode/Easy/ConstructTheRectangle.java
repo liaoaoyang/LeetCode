@@ -5,7 +5,7 @@ package co.iay.leetcode.Easy;
  */
 public class ConstructTheRectangle {
     public int[] constructRectangle(int area) {
-        int l = (int)Math.ceil(Math.sqrt(area));
+        int l = (int) Math.ceil(Math.sqrt(area));
 
         for (; l <= area; ++l) {
             if (area % l == 0) {

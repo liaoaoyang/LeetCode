@@ -6,7 +6,7 @@ package co.iay.leetcode.Hard;
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii
  */
 public class BestTimeToBuyAndSellStockIII {
-    private void getMaxProfitFromLeftToRight(int[] prices, int [] maxProfit) {
+    private void getMaxProfitFromLeftToRight(int[] prices, int[] maxProfit) {
         int minPrice = prices[0];
 
         for (int i = 0; i < prices.length; ++i) {
@@ -24,7 +24,7 @@ public class BestTimeToBuyAndSellStockIII {
         }
     }
 
-    private void getMaxProfitFromRightToLeft(int[] prices, int [] maxProfit) {
+    private void getMaxProfitFromRightToLeft(int[] prices, int[] maxProfit) {
         int maxPrice = prices[prices.length - 1];
 
         for (int i = prices.length - 1; i >= 0; --i) {

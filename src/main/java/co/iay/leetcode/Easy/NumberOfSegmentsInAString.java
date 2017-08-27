@@ -7,8 +7,8 @@ package co.iay.leetcode.Easy;
  */
 public class NumberOfSegmentsInAString {
     public int countSegments(String s) {
-        final int STATUS_INIT      = 0;
-        final int STATUS_SPACE     = 1;
+        final int STATUS_INIT = 0;
+        final int STATUS_SPACE = 1;
         final int STATUS_NON_SPACE = 2;
 
         int len = s.length();

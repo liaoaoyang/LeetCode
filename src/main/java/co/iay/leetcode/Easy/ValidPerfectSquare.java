@@ -18,7 +18,7 @@ public class ValidPerfectSquare {
             middleSquare = middle * middle;
 
             if (middleSquare == x) {
-                return (int)middle;
+                return (int) middle;
             }
 
             if (middleSquare > x) {
@@ -29,7 +29,7 @@ public class ValidPerfectSquare {
             left = middle + 1;
         }
 
-        return (int)right;
+        return (int) right;
     }
 
     public boolean isPerfectSquare(int num) {

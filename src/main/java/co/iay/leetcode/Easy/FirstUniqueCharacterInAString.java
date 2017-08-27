@@ -5,7 +5,7 @@ package co.iay.leetcode.Easy;
  * https://leetcode.com/problems/first-unique-character-in-a-string/
  */
 public class FirstUniqueCharacterInAString {
-     final private static int LEN = 256;
+    final private static int LEN = 256;
 
     public int firstUniqChar(String s) {
         int[] count = new int[LEN];

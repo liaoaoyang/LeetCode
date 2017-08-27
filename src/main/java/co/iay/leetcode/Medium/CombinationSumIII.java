@@ -30,7 +30,7 @@ public class CombinationSumIII {
                 continue;
             }
 
-            getCombinations(result, target,left - i, n, k, i + 1, kk - 1, r);
+            getCombinations(result, target, left - i, n, k, i + 1, kk - 1, r);
         }
     }
 

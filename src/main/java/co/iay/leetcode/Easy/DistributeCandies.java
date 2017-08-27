@@ -12,7 +12,7 @@ public class DistributeCandies {
     public int distributeCandies(int[] candies) {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
-        for (int c :candies) {
+        for (int c : candies) {
             map.put(c, 0);
         }
 

@@ -15,7 +15,7 @@ public class GuessGame {
     }
 
     public void init(int n) {
-        this.chosenNumber = (int)(Math.random()  * n);
+        this.chosenNumber = (int) (Math.random() * n);
         this.chosenNumber = (this.chosenNumber == 0 ? 1 : this.chosenNumber);
     }
 

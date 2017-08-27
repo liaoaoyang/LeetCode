@@ -12,7 +12,7 @@ public class ExcelSheetColumnTitle {
         String result = "";
 
         while (n > 0) {
-            result = (char)('A' + (n % 26 == 0 ? 26 : n % 26) - 1) + result;
+            result = (char) ('A' + (n % 26 == 0 ? 26 : n % 26) - 1) + result;
             n /= 26;
 
             if (result.charAt(0) == 'Z') {

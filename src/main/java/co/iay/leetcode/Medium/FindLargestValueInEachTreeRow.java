@@ -31,7 +31,7 @@ public class FindLargestValueInEachTreeRow {
 
             boolean allNull = true;
 
-            for(TreeNode node : pl) {
+            for (TreeNode node : pl) {
                 if (node == null) {
                     continue;
                 }
@@ -57,8 +57,7 @@ public class FindLargestValueInEachTreeRow {
 
             if (allNull) {
                 break;
-            }
-            else {
+            } else {
                 result.add(levelMax);
             }
         }
