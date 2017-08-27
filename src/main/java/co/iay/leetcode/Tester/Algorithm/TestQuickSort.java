@@ -12,6 +12,7 @@ public class TestQuickSort {
     private void testQuickSortOfArrayWithSize(int arraySize) {
         testQuickSortOfArrayWithSize(arraySize, false);
     }
+
     private void testQuickSortOfArrayWithSize(int arraySize, boolean printTime) {
         System.out.print(printTime ? "=========> QuickSort begin <=========\n" : "");
         Integer[] result = new Integer[arraySize];

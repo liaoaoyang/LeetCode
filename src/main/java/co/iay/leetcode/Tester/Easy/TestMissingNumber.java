@@ -12,16 +12,16 @@ public class TestMissingNumber {
 
     @Test
     public void testMissingNumberCase1() {
-        Assert.assertEquals(3, m.missingNumber(new int[] {4, 1, 0, 2}));
+        Assert.assertEquals(3, m.missingNumber(new int[]{4, 1, 0, 2}));
     }
 
     @Test
     public void testMissingNumberCase2() {
-        Assert.assertEquals(1, m.missingNumber(new int[] {0}));
+        Assert.assertEquals(1, m.missingNumber(new int[]{0}));
     }
 
     @Test
     public void testMissingNumberCase3() {
-        Assert.assertEquals(0, m.missingNumber(new int[] {1}));
+        Assert.assertEquals(0, m.missingNumber(new int[]{1}));
     }
 }

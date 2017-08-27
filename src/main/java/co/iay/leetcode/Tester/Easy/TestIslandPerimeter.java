@@ -12,11 +12,11 @@ public class TestIslandPerimeter {
 
     @Test
     public void testIslandPerimeterCase1() {
-        int m[][] = new int[][] {
-            {0, 1, 0, 0},
-            {1, 1, 1, 0},
-            {0, 1, 0, 0},
-            {1, 1, 0, 0}
+        int m[][] = new int[][]{
+                {0, 1, 0, 0},
+                {1, 1, 1, 0},
+                {0, 1, 0, 0},
+                {1, 1, 0, 0}
         };
         Assert.assertEquals(16, i.islandPerimeter(m));
     }

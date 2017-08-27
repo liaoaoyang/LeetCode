@@ -12,11 +12,11 @@ public class TestMaximumSubarray {
 
     @Test
     public void testMaximumSubarrayCase1() {
-        Assert.assertEquals(6, m.maxSubArray(new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        Assert.assertEquals(6, m.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
     }
 
     @Test
     public void testMaximumSubarrayCase2() {
-        Assert.assertEquals(1, m.maxSubArray(new int[] {1, -11, -12}));
+        Assert.assertEquals(1, m.maxSubArray(new int[]{1, -11, -12}));
     }
 }

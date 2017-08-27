@@ -19,9 +19,9 @@ public class TestBinaryTreeLevelOrderTraversalII {
     public void testBinaryTreeLevelOrderTraversalIICase1() {
         TreeNode t = TreeNode.buildTree(new Integer[]{3, 9, 20, null, null, 15, 7});
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        result.add(Arrays.asList(new Integer[] {15, 7}));
-        result.add(Arrays.asList(new Integer[] {9, 20}));
-        result.add(Arrays.asList(new Integer[] {3}));
+        result.add(Arrays.asList(new Integer[]{15, 7}));
+        result.add(Arrays.asList(new Integer[]{9, 20}));
+        result.add(Arrays.asList(new Integer[]{3}));
         Assert.assertEquals(result, b.levelOrderBottom(t));
     }
 }

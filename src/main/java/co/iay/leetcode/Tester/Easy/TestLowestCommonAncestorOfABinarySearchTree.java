@@ -17,7 +17,7 @@ public class TestLowestCommonAncestorOfABinarySearchTree {
     public void testLowestCommonAncestorOfABinarySearchTreeCase1() {
         HashMap<Integer, TreeNode> oriIdxTreeNodeMap = new HashMap<Integer, TreeNode>();
 
-        TreeNode[] t = TreeNode.buildTreeArray(new Integer[] {6,
+        TreeNode[] t = TreeNode.buildTreeArray(new Integer[]{6,
                 2, 8,
                 0, 4, 7, 9,
                 null, null, 3, 5, null, null, null, null}, oriIdxTreeNodeMap);
@@ -36,7 +36,7 @@ public class TestLowestCommonAncestorOfABinarySearchTree {
     public void testLowestCommonAncestorOfABinarySearchTreeCase2() {
         HashMap<Integer, TreeNode> oriIdxTreeNodeMap = new HashMap<Integer, TreeNode>();
 
-        TreeNode[] t = TreeNode.buildTreeArray(new Integer[] {6,
+        TreeNode[] t = TreeNode.buildTreeArray(new Integer[]{6,
                 2, 8,
                 0, 4, 7, 9,
                 null, null, 3, 5, null, null, null, null}, oriIdxTreeNodeMap);

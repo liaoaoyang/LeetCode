@@ -11,14 +11,12 @@ public class TestPowerOfFour {
     private PowerOfFour powerOfFour = new PowerOfFour();
 
     @Test
-    public void testPowerOfFourCase1()
-    {
-        Assert.assertEquals(true, powerOfFour.isPowerOfFour(1<<2));
+    public void testPowerOfFourCase1() {
+        Assert.assertEquals(true, powerOfFour.isPowerOfFour(1 << 2));
     }
 
     @Test
-    public void testPowerOfFourCase2()
-    {
-        Assert.assertEquals(false, powerOfFour.isPowerOfFour((1<<1) + 1));
+    public void testPowerOfFourCase2() {
+        Assert.assertEquals(false, powerOfFour.isPowerOfFour((1 << 1) + 1));
     }
 }

@@ -11,26 +11,26 @@ public class TestSearchInsertPosition {
     private SearchInsertPosition s = new SearchInsertPosition();
 
     /**
-     [1]
-     0
-     [1,3,5,6]
-     5
-     [1,3,5,6]
-     2
-     [1,3,4,5,6]
-     2
-     [1,3,5,6]
-     7
-     [1,3]
-     2
-     [1]
-     2
-     [2]
-     1
-     [1,3,5,6]
-     6
-     [1,3,5,6]
-     1
+     * [1]
+     * 0
+     * [1,3,5,6]
+     * 5
+     * [1,3,5,6]
+     * 2
+     * [1,3,4,5,6]
+     * 2
+     * [1,3,5,6]
+     * 7
+     * [1,3]
+     * 2
+     * [1]
+     * 2
+     * [2]
+     * 1
+     * [1,3,5,6]
+     * 6
+     * [1,3,5,6]
+     * 1
      */
     @Test
     public void testSearchInsertPositionCase1() {

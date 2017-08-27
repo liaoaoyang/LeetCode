@@ -12,16 +12,16 @@ public class TestDistributeCandies {
 
     @Test
     public void testDistributeCandiesCase1() {
-        Assert.assertEquals(3, d.distributeCandies(new int[] {1, 1, 2, 2, 3, 3}));
+        Assert.assertEquals(3, d.distributeCandies(new int[]{1, 1, 2, 2, 3, 3}));
     }
 
     @Test
     public void testDistributeCandiesCase2() {
-        Assert.assertEquals(2, d.distributeCandies(new int[] {1, 1, 2, 3}));
+        Assert.assertEquals(2, d.distributeCandies(new int[]{1, 1, 2, 3}));
     }
 
     @Test
     public void testDistributeCandiesCase3() {
-        Assert.assertEquals(1, d.distributeCandies(new int[] {1, 1, 1, 1}));
+        Assert.assertEquals(1, d.distributeCandies(new int[]{1, 1, 1, 1}));
     }
 }

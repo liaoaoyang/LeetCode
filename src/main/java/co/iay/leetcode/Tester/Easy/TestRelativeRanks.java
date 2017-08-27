@@ -12,7 +12,7 @@ public class TestRelativeRanks {
 
     @Test
     public void testRelativeRanksCase1() {
-        Assert.assertArrayEquals(new String[] {RelativeRanks.BRONZE, "4", "5", RelativeRanks.SILVER, RelativeRanks.GOLD},
+        Assert.assertArrayEquals(new String[]{RelativeRanks.BRONZE, "4", "5", RelativeRanks.SILVER, RelativeRanks.GOLD},
                 r.findRelativeRanks(new int[]{3, 2, 1, 4, 6}));
     }
 }

@@ -21,7 +21,7 @@ public class TestBinaryTreePaths {
 
         Assert.assertEquals(
                 cmp,
-                b.binaryTreePaths(TreeNode.buildTree(new Integer[] {1, 2, 3, null, 5}))
+                b.binaryTreePaths(TreeNode.buildTree(new Integer[]{1, 2, 3, null, 5}))
         );
     }
 }

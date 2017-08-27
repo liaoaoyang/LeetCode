@@ -12,6 +12,6 @@ public class TestMinimumMovesToEqualArrayElements {
 
     @Test
     public void testMinimumMovesToEqualArrayElementsCase1() {
-        Assert.assertEquals(3, m.minMoves(new int[] {1, 2, 3}));
+        Assert.assertEquals(3, m.minMoves(new int[]{1, 2, 3}));
     }
 }

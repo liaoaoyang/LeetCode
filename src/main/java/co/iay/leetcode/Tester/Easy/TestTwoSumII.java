@@ -12,6 +12,6 @@ public class TestTwoSumII {
 
     @Test
     public void testTwoSumIICase1() {
-        Assert.assertArrayEquals(new int[] {1, 2}, t.twoSum(new int[] {2, 7, 11, 15}, 9));
+        Assert.assertArrayEquals(new int[]{1, 2}, t.twoSum(new int[]{2, 7, 11, 15}, 9));
     }
 }

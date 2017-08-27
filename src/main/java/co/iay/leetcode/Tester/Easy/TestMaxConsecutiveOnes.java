@@ -12,11 +12,11 @@ public class TestMaxConsecutiveOnes {
 
     @Test
     public void testMaxConsecutiveOnesCase1() {
-        Assert.assertEquals(3, m.findMaxConsecutiveOnes(new int[] {1,1,0,1,1,1}));
+        Assert.assertEquals(3, m.findMaxConsecutiveOnes(new int[]{1, 1, 0, 1, 1, 1}));
     }
 
     @Test
     public void testMaxConsecutiveOnesCase2() {
-        Assert.assertEquals(4, m.findMaxConsecutiveOnes(new int[] {1,1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,1,1}));
+        Assert.assertEquals(4, m.findMaxConsecutiveOnes(new int[]{1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1}));
     }
 }

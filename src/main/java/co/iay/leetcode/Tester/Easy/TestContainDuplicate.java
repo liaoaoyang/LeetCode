@@ -18,7 +18,7 @@ public class TestContainDuplicate {
 
     @Test
     public void testContainDuplicateCase2() {
-        int[] a = new int[]{1,1};
+        int[] a = new int[]{1, 1};
         Assert.assertEquals(true, containsDuplicate.containsDuplicate(a));
     }
 

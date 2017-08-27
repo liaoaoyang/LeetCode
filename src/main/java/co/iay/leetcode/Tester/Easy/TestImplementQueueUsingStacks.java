@@ -17,7 +17,7 @@ public class TestImplementQueueUsingStacks {
         int[] case1 = new int[arrLen];
 
         for (int i = 0; i < arrLen; ++i) {
-            case1[i] = (int)(Math.random() * 100);
+            case1[i] = (int) (Math.random() * 100);
             myQueue.push(case1[i]);
         }
 

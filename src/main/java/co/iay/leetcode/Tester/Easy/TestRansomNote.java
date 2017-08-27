@@ -11,20 +11,17 @@ public class TestRansomNote {
     private RansomNote ransomNote = new RansomNote();
 
     @Test
-    public void testRansomNoteCase1()
-    {
+    public void testRansomNoteCase1() {
         Assert.assertEquals(false, ransomNote.canConstruct("a", "b"));
     }
 
     @Test
-    public void testRansomNoteCase2()
-    {
+    public void testRansomNoteCase2() {
         Assert.assertEquals(false, ransomNote.canConstruct("aa", "ab"));
     }
 
     @Test
-    public void testRansomNoteCase3()
-    {
+    public void testRansomNoteCase3() {
         Assert.assertEquals(true, ransomNote.canConstruct("aa", "aab"));
     }
 }

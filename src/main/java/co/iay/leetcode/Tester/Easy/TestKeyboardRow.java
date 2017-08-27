@@ -12,6 +12,6 @@ public class TestKeyboardRow {
 
     @Test
     public void testKeyboardRowCase1() {
-        Assert.assertArrayEquals(new String[] {"Alaska", "Dad"}, k.findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"}));
+        Assert.assertArrayEquals(new String[]{"Alaska", "Dad"}, k.findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"}));
     }
 }

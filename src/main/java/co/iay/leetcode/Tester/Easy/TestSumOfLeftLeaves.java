@@ -13,7 +13,7 @@ public class TestSumOfLeftLeaves {
 
     @Test
     public void testSumOfLeftLeavesCase1() {
-        TreeNode root = TreeNode.buildTree(new Integer[] {3, 9, 20, null, null, 15, 7});
+        TreeNode root = TreeNode.buildTree(new Integer[]{3, 9, 20, null, null, 15, 7});
         Assert.assertEquals(24, s.sumOfLeftLeaves(root));
     }
 }

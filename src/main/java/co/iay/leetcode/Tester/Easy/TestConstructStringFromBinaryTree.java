@@ -31,7 +31,7 @@ public class TestConstructStringFromBinaryTree {
 
     @Test
     public void testConstructStringFromBinaryTreeCase4() {
-        TreeNode t = TreeNode.buildTree(new Integer[]{1,null,2});
+        TreeNode t = TreeNode.buildTree(new Integer[]{1, null, 2});
         Assert.assertEquals("1()(2)", c.tree2str(t));
     }
 

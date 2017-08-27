@@ -12,6 +12,6 @@ public class TestArrayPartitionI {
 
     @Test
     public void testArrayPartitionICase1() {
-        Assert.assertEquals(4, a.arrayPairSum(new int[] {1, 4, 3, 2}));
+        Assert.assertEquals(4, a.arrayPairSum(new int[]{1, 4, 3, 2}));
     }
 }

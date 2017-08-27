@@ -12,21 +12,21 @@ public class TestMaximumProductOfThreeNumbers {
 
     @Test
     public void testMaximumProductOfThreeNumbersCase1() {
-        Assert.assertEquals(6, m.maximumProduct(new int[] {1, 2, 3}));
+        Assert.assertEquals(6, m.maximumProduct(new int[]{1, 2, 3}));
     }
 
     @Test
     public void testMaximumProductOfThreeNumbersCase2() {
-        Assert.assertEquals(24, m.maximumProduct(new int[] {1, 2, 3, 4}));
+        Assert.assertEquals(24, m.maximumProduct(new int[]{1, 2, 3, 4}));
     }
 
     @Test
     public void testMaximumProductOfThreeNumbersCase3() {
-        Assert.assertEquals(36, m.maximumProduct(new int[] {-1, -2, -3, -4, 0, 1, 2, 3}));
+        Assert.assertEquals(36, m.maximumProduct(new int[]{-1, -2, -3, -4, 0, 1, 2, 3}));
     }
 
     @Test
     public void testMaximumProductOfThreeNumbersCase4() {
-        Assert.assertEquals(0, m.maximumProduct(new int[] {-1, -2, -3, -4, 0}));
+        Assert.assertEquals(0, m.maximumProduct(new int[]{-1, -2, -3, -4, 0}));
     }
 }

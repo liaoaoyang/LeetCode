@@ -15,7 +15,7 @@ public class TestAverageOfLevelsInBinaryTree {
 
     @Test
     public void testAverageOfLevelsInBinaryTreeCase1() {
-        TreeNode t = TreeNode.buildTree(new Integer[] {1, 3, 4, null, null, 5, 6});
+        TreeNode t = TreeNode.buildTree(new Integer[]{1, 3, 4, null, null, 5, 6});
         Assert.assertEquals(Arrays.asList(1.0d, 3.5d, 5.5d), a.averageOfLevels(t));
     }
 }
