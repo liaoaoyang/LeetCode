@@ -18,13 +18,13 @@ public class TestBinaryTreePostorderTraversal {
     public void testBinaryTreePostorderTraversalCase1() {
         TreeNode tr = TreeNode.buildTree(new Integer[]{});
         List<Integer> cmp = b.postorderTraversal(tr);
-        Assert.assertEquals(Arrays.asList(new Integer[] {}), cmp);
+        Assert.assertEquals(Arrays.asList(new Integer[]{}), cmp);
     }
 
     @Test
     public void testBinaryTreePostorderTraversalCase2() {
         TreeNode tr = TreeNode.buildTree(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 1});
         List<Integer> cmp = b.postorderTraversal(tr);
-        Assert.assertEquals(Arrays.asList(new Integer[] {8, 9, 4, 1, 5, 2, 6, 7, 3, 1}), cmp);
+        Assert.assertEquals(Arrays.asList(new Integer[]{8, 9, 4, 1, 5, 2, 6, 7, 3, 1}), cmp);
     }
 }

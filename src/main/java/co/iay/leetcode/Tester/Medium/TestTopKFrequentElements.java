@@ -14,13 +14,13 @@ public class TestTopKFrequentElements {
 
     @Test
     public void testTopKFrequentElementsCase1() {
-        Assert.assertEquals(Arrays.asList(new Integer[] {1, 2}),
-                t.topKFrequent(new int[] {1, 1, 1, 2, 2, 3}, 2));
+        Assert.assertEquals(Arrays.asList(new Integer[]{1, 2}),
+                t.topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2));
     }
 
     @Test
     public void testTopKFrequentElementsCase2() {
-        Assert.assertEquals(Arrays.asList(new Integer[] {-1, 2}),
-                t.topKFrequent(new int[] {4, 1, -1, 2, -1, 2, 3}, 2));
+        Assert.assertEquals(Arrays.asList(new Integer[]{-1, 2}),
+                t.topKFrequent(new int[]{4, 1, -1, 2, -1, 2, 3}, 2));
     }
 }

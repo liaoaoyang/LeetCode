@@ -17,13 +17,13 @@ public class TestBinaryTreeLevelOrderTraversal {
 
     @Test
     public void testBinaryTreeLevelOrderTraversalCase1() {
-        TreeNode t = TreeNode.buildTree(new Integer[] {3,9,20,null,null,15,7});
+        TreeNode t = TreeNode.buildTree(new Integer[]{3, 9, 20, null, null, 15, 7});
         List<List<Integer>> cmp = new ArrayList<List<Integer>>();
-        List<Integer> tl = Arrays.asList(new Integer[] {3});
+        List<Integer> tl = Arrays.asList(new Integer[]{3});
         cmp.add(tl);
-        tl = Arrays.asList(new Integer[] {9, 20});
+        tl = Arrays.asList(new Integer[]{9, 20});
         cmp.add(tl);
-        tl = Arrays.asList(new Integer[] {15, 7});
+        tl = Arrays.asList(new Integer[]{15, 7});
         cmp.add(tl);
         Assert.assertEquals(cmp, b.levelOrder(t));
     }

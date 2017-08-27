@@ -15,19 +15,19 @@ public class TestBinaryTreeRightSideView {
 
     @Test
     public void testBinaryTreeRightSideViewCase1() {
-        TreeNode t = TreeNode.buildTree(new Integer[] {});
-        Assert.assertEquals(Arrays.asList(new Integer[] {}), b.rightSideView(t));
+        TreeNode t = TreeNode.buildTree(new Integer[]{});
+        Assert.assertEquals(Arrays.asList(new Integer[]{}), b.rightSideView(t));
     }
 
     @Test
     public void testBinaryTreeRightSideViewCase2() {
-        TreeNode t = TreeNode.buildTree(new Integer[] {1, 2, 3, null, 5, null, 4});
-        Assert.assertEquals(Arrays.asList(new Integer[] {1, 3, 4}), b.rightSideView(t));
+        TreeNode t = TreeNode.buildTree(new Integer[]{1, 2, 3, null, 5, null, 4});
+        Assert.assertEquals(Arrays.asList(new Integer[]{1, 3, 4}), b.rightSideView(t));
     }
 
     @Test
     public void testBinaryTreeRightSideViewCase3() {
-        TreeNode t = TreeNode.buildTree(new Integer[] {1, 2, 3, 4, null, null, null});
-        Assert.assertEquals(Arrays.asList(new Integer[] {1, 3, 4}), b.rightSideView(t));
+        TreeNode t = TreeNode.buildTree(new Integer[]{1, 2, 3, 4, null, null, null});
+        Assert.assertEquals(Arrays.asList(new Integer[]{1, 3, 4}), b.rightSideView(t));
     }
 }

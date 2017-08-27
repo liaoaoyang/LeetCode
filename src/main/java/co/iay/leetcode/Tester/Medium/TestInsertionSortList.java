@@ -13,15 +13,15 @@ public class TestInsertionSortList {
 
     @Test
     public void testInsertionSortListCase1() {
-        ListNode l = ListNode.buildListNodeByArray(new Integer[] {3, 1, 2, 4});
-        Assert.assertArrayEquals(new Integer[] {1, 2, 3, 4},
+        ListNode l = ListNode.buildListNodeByArray(new Integer[]{3, 1, 2, 4});
+        Assert.assertArrayEquals(new Integer[]{1, 2, 3, 4},
                 ListNode.buildArrayByList(i.insertionSortList(l)));
     }
 
     @Test
     public void testInsertionSortListCase2() {
-        ListNode l = ListNode.buildListNodeByArray(new Integer[] {});
-        Assert.assertArrayEquals(new Integer[] {},
+        ListNode l = ListNode.buildListNodeByArray(new Integer[]{});
+        Assert.assertArrayEquals(new Integer[]{},
                 ListNode.buildArrayByList(i.insertionSortList(l)));
     }
 }

@@ -15,10 +15,10 @@ public class TestAddTwoNumbersII {
 
     @Test
     public void testAddTwoNumbersCase1() {
-        ListNode r = a.addTwoNumbers(ListNode.buildListNodeByArray(new Integer[] {1, 2}),
-                ListNode.buildListNodeByArray(new Integer[] {9}));
+        ListNode r = a.addTwoNumbers(ListNode.buildListNodeByArray(new Integer[]{1, 2}),
+                ListNode.buildListNodeByArray(new Integer[]{9}));
         List<Integer> cmp = ListNode.buildArrayListByList(
-                ListNode.buildListNodeByArray(new Integer[] {2, 1})
+                ListNode.buildListNodeByArray(new Integer[]{2, 1})
         );
 
         Assert.assertEquals(cmp, ListNode.buildArrayListByList(r));
@@ -26,10 +26,10 @@ public class TestAddTwoNumbersII {
 
     @Test
     public void testAddTwoNumbersCase2() {
-        ListNode r = a.addTwoNumbers(ListNode.buildListNodeByArray(new Integer[] {2, 4, 3}),
-                ListNode.buildListNodeByArray(new Integer[] {5, 6, 4}));
+        ListNode r = a.addTwoNumbers(ListNode.buildListNodeByArray(new Integer[]{2, 4, 3}),
+                ListNode.buildListNodeByArray(new Integer[]{5, 6, 4}));
         List<Integer> cmp = ListNode.buildArrayListByList(
-                ListNode.buildListNodeByArray(new Integer[] {2, 1})
+                ListNode.buildListNodeByArray(new Integer[]{2, 1})
         );
 
         Assert.assertEquals(cmp, ListNode.buildArrayListByList(r));

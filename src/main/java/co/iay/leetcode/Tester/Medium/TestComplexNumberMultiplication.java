@@ -12,6 +12,6 @@ public class TestComplexNumberMultiplication {
 
     @Test
     public void testComplexNumberMultiplicationCase1() {
-        Assert.assertEquals("0+2i", c.complexNumberMultiply("1+1i","1+1i"));
+        Assert.assertEquals("0+2i", c.complexNumberMultiply("1+1i", "1+1i"));
     }
 }

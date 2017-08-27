@@ -15,10 +15,10 @@ public class TestMergeIntervals {
 
     @Test
     public void testMergeIntervalsCase1() {
-        Assert.assertEquals(Arrays.asList(new Interval[] {
-                new Interval(1, 6),
-                new Interval(8, 10),
-                new Interval(15, 18)}),
+        Assert.assertEquals(Arrays.asList(new Interval[]{
+                        new Interval(1, 6),
+                        new Interval(8, 10),
+                        new Interval(15, 18)}),
                 m.merge(Arrays.asList(new Interval(1, 3),
                         new Interval(2, 6),
                         new Interval(8, 10),

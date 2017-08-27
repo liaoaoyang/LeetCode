@@ -28,8 +28,8 @@ public class TestRotateImage {
 
     @Test
     public void testRotateImageCase3() {
-        int[][] m = new int[][]{{1,2,3}, {4,5,6}, {7,8,9}};
-        int[][] r = new int[][]{{7,4,1}, {8,5,2}, {9,6,3}};
+        int[][] m = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] r = new int[][]{{7, 4, 1}, {8, 5, 2}, {9, 6, 3}};
         ri.rotate(m);
         Assert.assertArrayEquals(r, m);
     }

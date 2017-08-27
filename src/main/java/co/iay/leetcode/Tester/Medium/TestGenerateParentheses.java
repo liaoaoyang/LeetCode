@@ -14,8 +14,8 @@ public class TestGenerateParentheses {
 
     @Test
     public void testGenerateParenthesesCase1() {
-        String[] cmps = new String[] {
-            "()"
+        String[] cmps = new String[]{
+                "()"
         };
 
         Assert.assertEquals(Arrays.asList(cmps), g.generateParenthesis(1));
@@ -23,9 +23,9 @@ public class TestGenerateParentheses {
 
     @Test
     public void testGenerateParenthesesCase2() {
-        String[] cmps = new String[] {
-            "(())",
-            "()()"
+        String[] cmps = new String[]{
+                "(())",
+                "()()"
         };
 
         Assert.assertEquals(Arrays.asList(cmps), g.generateParenthesis(2));
@@ -33,7 +33,7 @@ public class TestGenerateParentheses {
 
     @Test
     public void testGenerateParenthesesCase3() {
-        String[] cmps = new String[] {
+        String[] cmps = new String[]{
                 "((()))",
                 "(()())",
                 "(())()",

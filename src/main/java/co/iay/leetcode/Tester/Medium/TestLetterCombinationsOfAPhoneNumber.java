@@ -14,25 +14,25 @@ public class TestLetterCombinationsOfAPhoneNumber {
 
     @Test
     public void testLetterCombinationsOfAPhoneNumberCase1() {
-        Assert.assertEquals(Arrays.asList(new String[] {"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}),
+        Assert.assertEquals(Arrays.asList(new String[]{"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}),
                 l.letterCombinations("23"));
     }
 
     @Test
     public void testLetterCombinationsOfAPhoneNumberCase2() {
-        Assert.assertEquals(Arrays.asList(new String[] {}),
+        Assert.assertEquals(Arrays.asList(new String[]{}),
                 l.letterCombinations(""));
     }
 
     @Test
     public void testLetterCombinationsOfAPhoneNumberCase3() {
-        Assert.assertEquals(Arrays.asList(new String[] {"a", "b", "c"}),
+        Assert.assertEquals(Arrays.asList(new String[]{"a", "b", "c"}),
                 l.letterCombinations("2"));
     }
 
     @Test
     public void testLetterCombinationsOfAPhoneNumberCase4() {
-        Assert.assertEquals(Arrays.asList(new String[] {}),
+        Assert.assertEquals(Arrays.asList(new String[]{}),
                 l.letterCombinations("111111"));
     }
 }

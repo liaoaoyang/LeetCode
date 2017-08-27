@@ -16,8 +16,8 @@ public class TestFindLargestValueInEachTreeRow {
 
     @Test
     public void testFindLargestValueInEachTreeRowCase1() {
-        TreeNode tree = TreeNode.buildTree(new Integer[] {1, 3, 2, 5, 3, null, 9});
-        List<Integer> cmp = Arrays.asList(new Integer[] {1, 3, 9});
+        TreeNode tree = TreeNode.buildTree(new Integer[]{1, 3, 2, 5, 3, null, 9});
+        List<Integer> cmp = Arrays.asList(new Integer[]{1, 3, 9});
         Assert.assertEquals(cmp, f.largestValues(tree));
     }
 }

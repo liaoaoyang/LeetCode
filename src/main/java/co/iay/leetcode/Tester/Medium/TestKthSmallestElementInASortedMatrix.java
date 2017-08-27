@@ -12,7 +12,7 @@ public class TestKthSmallestElementInASortedMatrix {
 
     @Test
     public void testKthSmallestElementInASortedMatrixCase1() {
-        int[][] arr = new int[][] {
+        int[][] arr = new int[][]{
                 {1, 2},
                 {3, 3},
         };
@@ -22,8 +22,8 @@ public class TestKthSmallestElementInASortedMatrix {
 
     @Test
     public void testKthSmallestElementInASortedMatrixCase2() {
-        int[][] arr = new int[][] {
-                {1,  5,  9},
+        int[][] arr = new int[][]{
+                {1, 5, 9},
                 {10, 11, 13},
                 {12, 13, 15},
         };
@@ -33,7 +33,7 @@ public class TestKthSmallestElementInASortedMatrix {
 
     @Test
     public void testKthSmallestElementInASortedMatrixCase3() {
-        int[][] arr = new int[][] {
+        int[][] arr = new int[][]{
                 {1, 2},
                 {1, 3},
         };
