@@ -54,5 +54,23 @@ public class ListNode {
         List<Integer> li = buildArrayListByList(l);
         return li.toArray(new Integer[li.size()]);
     }
+
+    @SuppressWarnings("unused")
+    public static void printListByList(ListNode l) {
+        ListNode tl = l;
+        int count = 0;
+
+        while (tl != null) {
+            System.out.printf("%d->", tl.val);
+            tl = tl.next;
+            ++count;
+        }
+
+        if (count > 0) {
+            System.out.println("NULL");
+        } else {
+            System.out.println();
+        }
+    }
 }
 
