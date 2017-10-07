@@ -23,7 +23,10 @@ public class FirstMissingPositive {
         for (int i = 0; i < nums.length; ) {
             int tmp = nums[i];
 
-            if (nums[i] >= 1 && nums[i] <= nums.length && nums[tmp - 1] != nums[i] && nums[i] != i + 1) {
+            if (nums[i] >= 1 &&
+                    nums[i] <= nums.length &&
+                    nums[tmp - 1] != nums[i] &&
+                    nums[i] != i + 1) {
                 nums[i] = nums[tmp - 1];
                 nums[tmp - 1] = tmp;
             } else {
