@@ -21,9 +21,9 @@ import java.util.List;
  *       /              \
  *   ___5__          ___1__
  *  /      \        /      \
- * 6      _2       0       8
- * /  \
- * 7   4
+ * 6      _2_       0       8
+ *       /   \
+ *      7    4
  * For example, the lowest common ancestor (LCA) of nodes 5 and 1 is 3.
  * Another example is LCA of nodes 5 and 4 is 5,
  * since a node can be a descendant of itself according to the LCA definition.
@@ -69,6 +69,7 @@ public class LowestCommonAncestorOfABinaryTree {
         return null;
     }
 
+    @SuppressWarnings("unused")
     private TreeNode pathCompareSolution(TreeNode root, TreeNode p, TreeNode q) {
         List<TreeNode> pathP = new ArrayList<TreeNode>();
         List<TreeNode> pathQ = new ArrayList<TreeNode>();
