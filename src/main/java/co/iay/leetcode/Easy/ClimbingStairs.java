@@ -3,6 +3,15 @@ package co.iay.leetcode.Easy;
 /**
  * 70. Climbing Stairs
  * https://leetcode.com/problems/climbing-stairs/
+ * You are climbing a stair case. It takes n steps to reach to the top.
+ * <p>
+ * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+ * <p>
+ * Note: Given n will be a positive integer.
+ * Solution:
+ * 本题因为可以一次走1步或者2步，可以分解为如果离当前台阶1步或者2步，
+ * 只会有一种走法，就是选择走1步或者走2步。
+ * 所以演变为可以有多少种走法之和的问题。
  */
 public class ClimbingStairs {
     private int lessSpaceSolution(int n) {
