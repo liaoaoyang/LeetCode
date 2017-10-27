@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by aoyang on 16/4/14.
  */
-public class ListNode {
+public class ListNode implements Comparable {
     public int val;
     public ListNode next;
 
@@ -71,6 +71,34 @@ public class ListNode {
         } else {
             System.out.println();
         }
+    }
+
+    public int getLength() {
+        int len = 0;
+
+        ListNode tmp = this;
+
+        while (tmp != null) {
+            ++len;
+            tmp = tmp.next;
+        }
+
+        return len;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (o == null || !(o instanceof ListNode)) {
+            return 1;
+        }
+
+        ListNode lo = (ListNode) o;
+
+        if (lo.val == this.val) {
+            return 0;
+        }
+
+        return lo.val > this.val ? -1 : 1;
     }
 }
 
