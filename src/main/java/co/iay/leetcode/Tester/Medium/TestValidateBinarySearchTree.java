@@ -28,4 +28,11 @@ public class TestValidateBinarySearchTree {
                 new Integer[]{10, 5, 15, null, null, 6, 20}
         )));
     }
+
+    @Test
+    public void testValidateBinarySearchTreeCase4() {
+        Assert.assertEquals(true, v.isValidBST(TreeNode.buildTree(
+                new Integer[]{Integer.MAX_VALUE}
+        )));
+    }
 }

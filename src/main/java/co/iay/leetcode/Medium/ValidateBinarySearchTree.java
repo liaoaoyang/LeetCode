@@ -24,7 +24,7 @@ import co.iay.leetcode.DataStructures.TreeNode;
  * Binary tree [1,2,3], return false.
  */
 public class ValidateBinarySearchTree {
-    private boolean isValidBST(TreeNode root, int low, int high) {
+    private boolean isValidBST(TreeNode root, long low, long high) {
         if (null == root) {
             return true;
         }
@@ -41,6 +41,6 @@ public class ValidateBinarySearchTree {
             return true;
         }
 
-        return isValidBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 }
