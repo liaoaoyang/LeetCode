@@ -5,9 +5,11 @@ import java.util.HashMap;
 /**
  * 697. Degree of an Array
  * https://leetcode.com/problems/degree-of-an-array/
- * Given a non-empty array of non-negative integers nums, the degree of this array is defined as the maximum frequency of any one of its elements.
+ * Given a non-empty array of non-negative integers nums,
+ * the degree of this array is defined as the maximum frequency of any one of its elements.
  * <p>
- * Your task is to find the smallest possible length of a (contiguous) subarray of nums, that has the same degree as nums.
+ * Your task is to find the smallest possible length of a (contiguous) subarray of nums,
+ * that has the same degree as nums.
  * <p>
  * Example 1:
  * Input: [1, 2, 2, 3, 1]
@@ -24,6 +26,9 @@ import java.util.HashMap;
  * <p>
  * nums.length will be between 1 and 50,000.
  * nums[i] will be an integer between 0 and 49,999.
+ * Solution:
+ * 首先判断数字出现次数，如果大于最大值，则记录当前数字的间距值；
+ * 如果出现频率等于最大频率，则判断数字距离是否更小，如果更小，则记录结果。
  */
 public class DegreeOfAnArray {
     private class Info {
@@ -74,6 +79,6 @@ public class DegreeOfAnArray {
             }
         }
 
-        return max.start == max.end ? 1 : max.end - max.start + 1;
+        return max.end - max.start + 1;
     }
 }
