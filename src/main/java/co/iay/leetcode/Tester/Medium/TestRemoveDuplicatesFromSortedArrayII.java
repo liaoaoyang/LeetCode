@@ -21,4 +21,18 @@ public class TestRemoveDuplicatesFromSortedArrayII {
         Assert.assertEquals(6, r.removeDuplicates(input));
         Assert.assertArrayEquals(new int[]{1, 1, 2, 2, 3, 3, 3, 3}, input);
     }
+
+    @Test
+    public void testRemoveDuplicatesFromSortedArrayIICase3() {
+        int[] input = new int[]{1, 1};
+        Assert.assertEquals(2, r.removeDuplicates(input));
+        Assert.assertArrayEquals(new int[]{1, 1}, input);
+    }
+
+    @Test
+    public void testRemoveDuplicatesFromSortedArrayIICase5() {
+        int[] input = new int[]{1, 1, 1, 1, 3, 3};
+        Assert.assertEquals(4, r.removeDuplicates(input));
+        Assert.assertArrayEquals(new int[]{1, 1, 3, 3, 3, 3}, input);
+    }
 }

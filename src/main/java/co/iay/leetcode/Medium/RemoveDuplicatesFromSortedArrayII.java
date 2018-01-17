@@ -13,16 +13,15 @@ package co.iay.leetcode.Medium;
  * It doesn't matter what you leave beyond the new length.
  */
 public class RemoveDuplicatesFromSortedArrayII {
-    public int removeDuplicates(int[] nums) {
+    @SuppressWarnings("unused")
+    private int bruteForceSolution(int[] nums) {
         long now = Long.MIN_VALUE;
         int nowLength = 0;
         int result = 0;
         int[] tmpNum = new int[nums.length];
         int tmpIndex = 0;
 
-        for (int i = 0; i < nums.length; ++i) {
-            int n = nums[i];
-
+        for (int n : nums) {
             if (now != n) {
                 result += nowLength;
                 nowLength = 1;
@@ -41,10 +40,36 @@ public class RemoveDuplicatesFromSortedArrayII {
 
         result += nowLength;
 
-        for (int i = 0; i < result; ++i) {
-            nums[i] = tmpNum[i];
-        }
+        System.arraycopy(tmpNum, 0, nums, 0, result);
 
         return result;
+    }
+
+    private int indexMoveSolution(int[] nums) {
+        int slowIndex = 0;
+        int nowNumberOccurred = 0;
+        long now = Long.MIN_VALUE;
+
+        for (int n : nums) {
+            nums[slowIndex] = n;
+
+            if (now != n) {
+                nowNumberOccurred = 1;
+                now = n;
+                ++slowIndex;
+                continue;
+            }
+
+            if (nowNumberOccurred == 1) {
+                ++nowNumberOccurred;
+                ++slowIndex;
+            }
+        }
+
+        return slowIndex;
+    }
+
+    public int removeDuplicates(int[] nums) {
+        return indexMoveSolution(nums);
     }
 }
