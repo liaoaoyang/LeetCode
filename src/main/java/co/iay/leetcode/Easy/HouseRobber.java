@@ -12,6 +12,11 @@ package co.iay.leetcode.Easy;
  * Given a list of non-negative integers representing the amount of money
  * of each house, determine the maximum amount of money you can rob tonight
  * without alerting the police.
+ * Solution:
+ * 关键在于判断如何是否加上当前一间屋子的价值，由于不能加上相邻屋子的价值，
+ * 需要判断加上当前屋子的价值和不加上当前屋子的价值的选择之间哪个更为有利。
+ * 可以得出递推公式为：
+ * dp[i] = max(dp[i - 2] + nums[i], dp[i - 1])
  */
 public class HouseRobber {
     public int rob(int[] nums) {
