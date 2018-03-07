@@ -19,6 +19,10 @@ package co.iay.leetcode.Medium;
  * Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
  * Note:
  * The input string length won't exceed 1000.
+ * Solution:
+ * 回文aa/aba两种形式，使用二维数组dp记录某个区间是否是回文，dp[i][j]表示原字符串[i:j]区间是否是回文。
+ * 判断区间首尾两个字符是否相同，如果相同再判断区间中间的部分是否是回文，如果这两个条件均符合，则新的区间必然是回文。
+ * 此处注意遍历需要从后往前，可以避免遗漏。
  */
 public class PalindromicSubstrings {
     public int countSubstrings(String s) {
