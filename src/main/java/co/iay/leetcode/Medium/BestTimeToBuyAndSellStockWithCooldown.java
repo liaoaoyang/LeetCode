@@ -57,7 +57,25 @@ public class BestTimeToBuyAndSellStockWithCooldown {
         return sell[prices.length - 1];
     }
 
+
+    @SuppressWarnings("unused")
+    private int o1SpaceSolution(int[] prices) {
+        int preBuy = 0;
+        int preSell = 0;
+        int sell = 0;
+        int buy = Integer.MIN_VALUE;
+
+        for (int price : prices) {
+            preBuy = buy;
+            buy = Math.max(preBuy, preSell - price);
+            preSell = sell;
+            sell = Math.max(sell, preBuy + price);
+        }
+
+        return sell;
+    }
+
     public int maxProfit(int[] prices) {
-        return oNSpaceSolution(prices);
+        return o1SpaceSolution(prices);
     }
 }
