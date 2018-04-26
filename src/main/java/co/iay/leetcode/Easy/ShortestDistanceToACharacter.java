@@ -20,6 +20,8 @@ import java.util.List;
  * S string length is in [1, 10000].
  * C is a single character, and guaranteed to be in string S.
  * All letters in S and C are lowercase.
+ * Solution:
+ * 首先从左到右判断与下一个字符的距离，之后再从右到左判断与上一个字符的距离，之后取最小值即可。
  */
 public class ShortestDistanceToACharacter {
     public int[] shortestToChar(String S, char C) {
