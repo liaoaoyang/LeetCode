@@ -30,6 +30,9 @@ package co.iay.leetcode.Easy;
  * <p>
  * 1 <= seats.length <= 20000
  * seats contains only 0s or 1s, at least one 0, and at least one 1.
+ * Solution:
+ * 分三种情况，[0,0,0,1][1,0,0,0][1,0,0,0,1]
+ * 只需要判断前置0的个数，后置0个数，两个1之间的0的个数的一半即可，两个1之间取一半是因为左右都是人，只能取中间
  */
 public class MaximizeDistanceToClosestPerson {
     public int maxDistToClosest(int[] seats) {
