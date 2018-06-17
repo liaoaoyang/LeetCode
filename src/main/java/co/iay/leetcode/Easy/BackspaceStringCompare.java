@@ -36,6 +36,9 @@ import java.util.Stack;
  * Follow up:
  * <p>
  * Can you solve it in O(N) time and O(1) space?
+ * Solution:
+ * 使用栈解决问题，遇到#号，只要栈不为空，则尝试弹出栈顶的字符，最终的字符串做比对。
+ * 这个解法时空复杂度都是O(n)
  */
 public class BackspaceStringCompare {
     private String str2stack2str(String S) {
