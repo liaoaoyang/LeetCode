@@ -1,5 +1,6 @@
 package co.iay.leetcode.Easy;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,18 +46,12 @@ public class UncommonWordsFromTwoSentences {
         bs = shorter;
         Map<String, Integer> hsa = new HashMap<>();
         for (String s : as) {
-            if (!hsa.containsKey(s)) {
-                hsa.put(s, 0);
-            }
-
+            hsa.putIfAbsent(s, 0);
             hsa.put(s, hsa.get(s) + 1);
         }
         Map<String, Integer> hsb = new HashMap<>();
         for (String s : bs) {
-            if (!hsb.containsKey(s)) {
-                hsb.put(s, 0);
-            }
-
+            hsb.putIfAbsent(s, 0);
             hsb.put(s, hsb.get(s) + 1);
         }
 
@@ -72,19 +67,26 @@ public class UncommonWordsFromTwoSentences {
             }
         }
 
-        String[] result = new String[hsa.size() + hsb.size()];
+        ArrayList<String> result = new ArrayList();
+        //String[] result = new String[hsa.size() + hsb.size()];
         int i = 0;
 
         for (String s : hsa.keySet()) {
-            result[i] = s;
-            ++i;
+            if (hsa.get(s) > 1) {
+                continue;
+            }
+
+            result.add(s);
         }
 
         for (String s : hsb.keySet()) {
-            result[i] = s;
-            ++i;
+            if (hsb.get(s) > 1) {
+                continue;
+            }
+
+            result.add(s);
         }
 
-        return result;
+        return result.toArray(new String[0]);
     }
 }

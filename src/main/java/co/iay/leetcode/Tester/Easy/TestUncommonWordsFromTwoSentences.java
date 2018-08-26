@@ -36,4 +36,14 @@ public class TestUncommonWordsFromTwoSentences {
                 )
         );
     }
+
+    @Test
+    public void testUncommonWordsFromTwoSentencesCase4() {
+        Assert.assertArrayEquals(new String[]{"xyz"},
+                u.uncommonFromSentences(
+                        "abcd def abcd xyz",
+                        "ijk def ijk"
+                )
+        );
+    }
 }
