@@ -67,9 +67,7 @@ public class UncommonWordsFromTwoSentences {
             }
         }
 
-        ArrayList<String> result = new ArrayList();
-        //String[] result = new String[hsa.size() + hsb.size()];
-        int i = 0;
+        ArrayList<String> result = new ArrayList<>();
 
         for (String s : hsa.keySet()) {
             if (hsa.get(s) > 1) {
