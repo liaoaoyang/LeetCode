@@ -1,7 +1,7 @@
 package co.iay.leetcode.Easy;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 893. Groups of Special-Equivalent Strings
@@ -49,10 +49,14 @@ import java.util.Map;
  * 1 <= A[i].length <= 20
  * All A[i] have the same length.
  * All A[i] consist of only lowercase letters.
+ * Solution:
+ * 题干中提到str[i]和str[j]可以任意次数交换，并且奇数位和奇数位之间可以交换，偶数位亦然。
+ * 所以只需要统计各个奇数位字符出现个数是否相同，同时对偶数位也做相同处理，最终统计出现的
+ * 组合数即可。
  */
 public class GroupsOfSpecialEquivalentStrings {
-    private String getPattern(String str) {
-        StringBuilder sb = new StringBuilder();
+    private String getPattern(String str, StringBuilder sb) {
+        sb.setLength(0);
         int[] oddCounter = new int[26];
         int[] evenCounter = new int[26];
 
@@ -88,10 +92,11 @@ public class GroupsOfSpecialEquivalentStrings {
     }
 
     public int numSpecialEquivGroups(String[] A) {
-        Map<String, Integer> groups = new HashMap<>();
+        Set<String> groups = new HashSet<>();
+        StringBuilder sb = new StringBuilder();
 
         for (String a : A) {
-            groups.putIfAbsent(getPattern(a), 1);
+            groups.add(getPattern(a, sb));
         }
 
         return groups.size();
