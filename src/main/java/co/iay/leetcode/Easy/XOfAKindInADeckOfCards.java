@@ -43,6 +43,9 @@ import java.util.*;
  * <p>
  * 1 <= deck.length <= 10000
  * 0 <= deck[i] < 10000
+ * Solution:
+ * 如果能够按照同样牌点数进行组合，并且每一组张数相同，必然存在一个公约数。
+ * 约数可以都由质数组成，可以先获取n/2以内的所有质数，统计是否能够在这些质数中找到各牌张数的公约数。
  */
 public class XOfAKindInADeckOfCards {
     private static List<Integer> getPrimes(int maxValue) {
