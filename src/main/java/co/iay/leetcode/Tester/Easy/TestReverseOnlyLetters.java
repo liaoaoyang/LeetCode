@@ -26,4 +26,9 @@ public class TestReverseOnlyLetters {
     public void testReverseOnlyLettersCase4() {
         Assert.assertEquals("", r.reverseOnlyLetters(""));
     }
+
+    @Test
+    public void testReverseOnlyLettersCase5() {
+        Assert.assertEquals("a+-b", r.reverseOnlyLetters("b+-a"));
+    }
 }

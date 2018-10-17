@@ -33,7 +33,8 @@ import java.util.Deque;
  * S doesn't contain \ or "
  */
 public class ReverseOnlyLetters {
-    public String reverseOnlyLetters(String S) {
+    @SuppressWarnings("unused")
+    private String dequeSolution(String S) {
         Deque<Character> cq = new ArrayDeque<>();
         Deque<Character> ncq = new ArrayDeque<>();
         StringBuilder sb = new StringBuilder();
@@ -55,5 +56,32 @@ public class ReverseOnlyLetters {
         }
 
         return sb.toString();
+    }
+
+    public String reverseOnlyLetters(String S) {
+        char[] sc = S.toCharArray();
+        int left = 0;
+        int right = sc.length - 1;
+
+        while (left < right) {
+            if (Character.isAlphabetic(sc[left]) && Character.isAlphabetic(sc[right])) {
+                char tmp = sc[left];
+                sc[left] = sc[right];
+                sc[right] = tmp;
+                ++left;
+                --right;
+                continue;
+            }
+
+            if (!Character.isAlphabetic(sc[right])) {
+                --right;
+            }
+
+            if (!Character.isAlphabetic(sc[left])) {
+                ++left;
+            }
+        }
+
+        return new String(sc);
     }
 }
