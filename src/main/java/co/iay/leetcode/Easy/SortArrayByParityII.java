@@ -31,7 +31,8 @@ public class SortArrayByParityII {
         A[j] = tmp;
     }
 
-    public int[] sortArrayByParityII(int[] A) {
+    @SuppressWarnings("unused")
+    private int[] swapSolution(int[] A) {
         for (int i = 0; i < A.length; ++i) {
             if (i % 2 == A[i] % 2) {
                 continue;
@@ -48,5 +49,31 @@ public class SortArrayByParityII {
         }
 
         return A;
+    }
+
+    private int[] extraSpaceSolution(int[] A) {
+        int[] newA = new int[A.length];
+        int evenIdx = 0;
+        int oddIdx = 1;
+
+        for (int i = 0; i < A.length; ++i) {
+            if (A[i] % 2 == 0) {
+                newA[evenIdx] = A[i];
+                evenIdx += 2;
+            }
+        }
+
+        for (int i = 0; i < A.length; ++i) {
+            if (A[i] % 2 == 1) {
+                newA[oddIdx] = A[i];
+                oddIdx += 2;
+            }
+        }
+
+        return newA;
+    }
+
+    public int[] sortArrayByParityII(int[] A) {
+        return extraSpaceSolution(A);
     }
 }

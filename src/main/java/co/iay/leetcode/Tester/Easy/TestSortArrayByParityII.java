@@ -19,4 +19,11 @@ public class TestSortArrayByParityII {
         A = s.sortArrayByParityII(A);
         checkResult(A);
     }
+
+    @Test
+    public void testSortArrayByParityIICase2() {
+        int[] A = new int[]{3, 1, 4, 2};
+        A = s.sortArrayByParityII(A);
+        checkResult(A);
+    }
 }
