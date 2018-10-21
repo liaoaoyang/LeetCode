@@ -60,11 +60,7 @@ public class SortArrayByParityII {
             if (A[i] % 2 == 0) {
                 newA[evenIdx] = A[i];
                 evenIdx += 2;
-            }
-        }
-
-        for (int i = 0; i < A.length; ++i) {
-            if (A[i] % 2 == 1) {
+            } else {
                 newA[oddIdx] = A[i];
                 oddIdx += 2;
             }
