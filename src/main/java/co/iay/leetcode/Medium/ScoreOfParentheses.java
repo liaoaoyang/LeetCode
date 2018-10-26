@@ -35,6 +35,11 @@ import java.util.List;
  * <p>
  * S is a balanced parentheses string, containing only ( and ).
  * 2 <= S.length <= 50
+ * Solution:
+ * 第一步：找到所有()的字串，替换为值1
+ * 第二步：找到所有的(数字)的字串，替换为2*数字
+ * 第三步：找出连续的数字，求和
+ * 重复第二步与第三步，直到整个列表只剩下一个元素，即结果值。
  */
 public class ScoreOfParentheses {
     private boolean isParentheses(int i) {
