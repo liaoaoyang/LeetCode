@@ -39,7 +39,8 @@ package co.iay.leetcode.Easy;
  * The characters of name and typed are lowercase letters.
  */
 public class LongPressedName {
-    public boolean isLongPressedName(String name, String typed) {
+    @SuppressWarnings({"unused"})
+    private boolean compareAndForwardSolution(String name, String typed) {
         if (name.length() == 1 && typed.length() == 1) {
             return name.equals(typed);
         }
@@ -85,5 +86,37 @@ public class LongPressedName {
         }
 
         return true;
+    }
+
+    private boolean fasterSolution(String name, String typed) {
+        int nameLength = name.length();
+        int typedLength = typed.length();
+
+        if (nameLength > typedLength) {
+            return false;
+        }
+
+        int iName = 0;
+        int iTyped = 0;
+
+        while (iName < nameLength || iTyped < typedLength) {
+            if (iName < nameLength && iTyped < typedLength && name.charAt(iName) == typed.charAt(iTyped)) {
+                // 当两个字符都相同时，尝试比较下一个字符 "aab" "aab"
+                ++iName;
+                ++iTyped;
+            } else if (iName > 0 && iTyped < typedLength && name.charAt(iName - 1) == typed.charAt(iTyped)) {
+                // 当两个字符不同时，尝试比较当前字符是否与上一个字符相同 "ab" "aab"
+                ++iTyped;
+            } else {
+                break;
+            }
+        }
+
+        // 如果是重复输入，那么去掉重复字符之后，两个字符串的下标应该都是到达字符串末尾的
+        return iName == nameLength && iTyped == typedLength;
+    }
+
+    public boolean isLongPressedName(String name, String typed) {
+        return fasterSolution(name, typed);
     }
 }
