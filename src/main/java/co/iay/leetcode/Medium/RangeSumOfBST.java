@@ -26,27 +26,17 @@ import co.iay.leetcode.DataStructures.TreeNode;
  * The final answer is guaranteed to be less than 2^31.
  */
 public class RangeSumOfBST {
-    private int sum = 0;
-
-    private void travel(TreeNode root, int L, int R) {
+    public int rangeSumBST(TreeNode root, int L, int R) {
         if (root == null) {
-            return;
+            return 0;
         }
 
         if (root.val < L) {
-            travel(root.right, L, R);
+            return rangeSumBST(root.right, L, R);
         } else if (root.val > R) {
-            travel(root.left, L, R);
+            return rangeSumBST(root.left, L, R);
         } else {
-            sum += root.val;
-            travel(root.left, L, R);
-            travel(root.right, L, R);
+            return root.val + rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R);
         }
-    }
-
-    public int rangeSumBST(TreeNode root, int L, int R) {
-        sum = 0;
-        travel(root, L, R);
-        return sum;
     }
 }
