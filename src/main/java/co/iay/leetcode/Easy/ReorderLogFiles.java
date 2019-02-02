@@ -36,6 +36,9 @@ import java.util.Comparator;
  * 0 <= logs.length <= 100
  * 3 <= logs[i].length <= 100
  * logs[i] is guaranteed to have an identifier, and a word after the identifier.
+ * Solution:
+ * 根据标示符后的首字母判断类型，对字符log按字典序排列，数字log按照原顺序排列。
+ * 由于采用Java实现，利用Comparator的特性完成
  */
 public class ReorderLogFiles {
     private boolean isLetterLogs(String log) {
