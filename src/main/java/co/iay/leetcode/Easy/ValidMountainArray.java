@@ -31,6 +31,9 @@ package co.iay.leetcode.Easy;
  * <p>
  * 0 <= A.length <= 10000
  * 0 <= A[i] <= 10000
+ * Solution:
+ * 山形数组特点是左单调递增，右单调递减。
+ * 从数组两端出发，判断左边是否递增，再判断右边是否递减，最终二者峰值数组下标应当一致，并且不位于数组两端
  */
 public class ValidMountainArray {
     public boolean validMountainArray(int[] A) {
