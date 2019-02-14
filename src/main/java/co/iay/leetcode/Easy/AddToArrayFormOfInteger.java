@@ -40,6 +40,8 @@ import java.util.List;
  * 0 <= A[i] <= 9
  * 0 <= K <= 10000
  * If A.length > 1, then A[0] != 0
+ * Solution:
+ * 常规做法，从最低位开始计算，判断是否需要进位，类似常规的超大数字相加。
  */
 public class AddToArrayFormOfInteger {
     public List<Integer> addToArrayForm(int[] A, int K) {
