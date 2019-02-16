@@ -25,21 +25,45 @@ import java.util.Arrays;
  * 1 <= A.length <= 10000
  * -10000 <= A[i] <= 10000
  * A is sorted in non-decreasing order.
+ * Solution:
+ * 常规情况，求平方数后排序。
+ * 但是注意题干中的第三条：A is sorted in non-decreasing order.
+ * 说明A是一个单调递增的数组，那么只需要比较两端数字的绝对值。
+ * 绝对值大的应该在更靠后的位置，绝对值小的数和下一个数字继续进行比较。
+ * 终结条件即左右下标交汇。
  */
 public class SquaresOfASortedArray {
+    @SuppressWarnings("unused")
     private int[] forceSolution(int[] A) {
-        int[] result = new int[A.length];
-
         for (int i = 0; i < A.length; ++i) {
-            result[i] = A[i] * A[i];
+            A[i] = A[i] * A[i];
         }
 
-        Arrays.sort(result);
+        Arrays.sort(A);
+
+        return A;
+    }
+
+    private int[] useDoubleIndexSolution(int[] A) {
+        int[] result = new int[A.length];
+
+        for (int left = 0, right = A.length - 1, i = right; left <= right; --i) {
+            int absLeftV = A[left] < 0 ? -A[left] : A[left];
+            int absRightV = A[right] < 0 ? -A[right] : A[right];
+
+            if (absLeftV > absRightV) {
+                result[i] = absLeftV * absLeftV;
+                ++left;
+            } else {
+                result[i] = absRightV * absRightV;
+                --right;
+            }
+        }
 
         return result;
     }
 
     public int[] sortedSquares(int[] A) {
-        return forceSolution(A);
+        return useDoubleIndexSolution(A);
     }
 }
