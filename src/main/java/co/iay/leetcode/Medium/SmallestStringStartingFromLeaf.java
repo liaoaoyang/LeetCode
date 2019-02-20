@@ -2,9 +2,6 @@ package co.iay.leetcode.Medium;
 
 import co.iay.leetcode.DataStructures.TreeNode;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * 988. Smallest String Starting From Leaf
  * https://leetcode.com/problems/smallest-string-starting-from-leaf/
@@ -37,7 +34,9 @@ import java.util.Set;
  * Output: "abc"
  */
 public class SmallestStringStartingFromLeaf {
-    private void travel(TreeNode node, Set<String> strs, StringBuilder sb) {
+    private String smallest;
+
+    private void travel(TreeNode node, StringBuilder sb) {
         if (node == null) {
             return;
         }
@@ -45,30 +44,24 @@ public class SmallestStringStartingFromLeaf {
         sb.insert(0, (char) ('a' + node.val));
 
         if (node.left == null && node.right == null) {
-            strs.add(sb.toString());
+            String str = sb.toString();
+            if (smallest != null) {
+                smallest = smallest.compareTo(str) > 0 ? str : smallest;
+            } else {
+                smallest = str;
+            }
             sb.deleteCharAt(0);
             return;
         }
 
-        travel(node.left, strs, sb);
-        travel(node.right, strs, sb);
+        travel(node.left, sb);
+        travel(node.right, sb);
         sb.deleteCharAt(0);
     }
 
     public String smallestFromLeaf(TreeNode root) {
-        Set<String> strs = new HashSet<>();
-        travel(root, strs, new StringBuilder());
-        String result = null;
-
-        for (String str : strs) {
-            if (null == result) {
-                result = str;
-                continue;
-            }
-
-            result = result.compareTo(str) > 0 ? str : result;
-        }
-
-        return result;
+        smallest = null;
+        travel(root, new StringBuilder());
+        return smallest;
     }
 }
