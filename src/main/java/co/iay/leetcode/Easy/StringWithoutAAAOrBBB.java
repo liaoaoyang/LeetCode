@@ -26,6 +26,9 @@ package co.iay.leetcode.Easy;
  * 0 <= A <= 100
  * 0 <= B <= 100
  * It is guaranteed such an S exists for the given A and B.
+ * Solutions:
+ * 题目保证存在这类字符串的存在，假设a更多，首先按照ababa的方式进行第一次排布，
+ * 之后填充a，每个a左边最多增加填充一个a即可（或者每个b左右）
  */
 public class StringWithoutAAAOrBBB {
     public String strWithout3a3b(int A, int B) {
