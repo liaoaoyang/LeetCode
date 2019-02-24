@@ -44,6 +44,10 @@ import java.util.List;
  * 1 <= A.length <= 1000
  * 1 <= A[i] <= 10^6
  * A[i] != A[j] for all i != j
+ * Solution:
+ * 实际上是对已排的升序数组，进行描述中的逆向操作。
+ * 观察数组，可以了解到逆向操作是，将最后一个数字放置到数组的第一位，之后加入下一个数字。
+ * 为了操作方便使用了ArrayList。
  */
 public class RevealCardsInIncreasingOrder {
     public int[] deckRevealedIncreasing(int[] deck) {
