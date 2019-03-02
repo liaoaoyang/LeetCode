@@ -32,6 +32,18 @@ package co.iay.leetcode.Medium;
  * <p>
  * The length of nums is at most 20000.
  * Each element nums[i] is an integer in the range [1, 10000].
+ * Solution:
+ * 本质上是相邻元素不能增加到结果中。
+ * 从小到大遍历数组，当要增加元素nums[i]时，nums[i-1]就不能被增加。
+ * 用notTake记录不选择nums[i]时的结果总和，用take记录选择时的总和。
+ * 分为如下几种情况：
+ * 1）
+ * 当决定不选择nums[i]时，在之前可以选择nums[i-1]或者不选择。
+ * 遍历到i时，take和notTake都是nums[i-1]时的状态，比较最大值即可。
+ * 2）
+ * 当决定选择nums[i]时，只能是拿到不选择nums[i-1]的总和加上nums[i]*其个数。
+ * 遍历到i时，notTake还未更新，表示的自然是不选择nums[i-1]的最大和。
+ * 逐步遍历更新take和notTake的值，最终返回结果即可。
  */
 public class DeleteAndEarn {
     public int deleteAndEarn(int[] nums) {
@@ -43,6 +55,7 @@ public class DeleteAndEarn {
 
         int[] sums = new int[max + 1];
 
+        // 获得每个元素能够取得的总值
         for (int n : nums) {
             sums[n] += n;
         }
