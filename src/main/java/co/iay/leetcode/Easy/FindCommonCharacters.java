@@ -30,6 +30,11 @@ import java.util.List;
  * 1 <= A.length <= 100
  * 1 <= A[i].length <= 100
  * A[i][j] is a lowercase letter
+ * Solution:
+ * 首先统计每个字符串中各个字符的出现次数。
+ * 用二位数组组织数据，横轴是各个a-z字母在一个字符串中出现的次数，纵轴是各个字符串。
+ * 由于全是26个字母，只需要对所有字符串的统计结果进行纵向遍历，找到最小出现的次数，
+ * 即为当前字母共同出现的次数，即结果。
  */
 public class FindCommonCharacters {
     public List<String> commonChars(String[] A) {
