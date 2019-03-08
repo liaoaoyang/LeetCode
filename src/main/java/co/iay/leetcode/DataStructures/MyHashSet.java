@@ -30,27 +30,33 @@ package co.iay.leetcode.DataStructures;
  * Please do not use the built-in HashSet library.
  */
 public class MyHashSet {
-    private short[] hashSet;
+    private char[] hashSet;
 
     /**
      * Initialize your data structure here.
      */
     public MyHashSet() {
-        hashSet = new short[1000001];
+        hashSet = new char[125001];
     }
 
     public void add(int key) {
-        hashSet[key] = 1;
+        int i = key / 8;
+        int pos = key % 8;
+        hashSet[i] |= (1 << pos);
     }
 
     public void remove(int key) {
-        hashSet[key] = 0;
+        int i = key / 8;
+        int pos = key % 8;
+        hashSet[i] &= (~(1 << pos));
     }
 
     /**
      * Returns true if this set contains the specified element
      */
     public boolean contains(int key) {
-        return hashSet[key] > 0;
+        int i = key / 8;
+        int pos = key % 8;
+        return (((int) hashSet[i]) & (1 << pos)) > 0;
     }
 }
