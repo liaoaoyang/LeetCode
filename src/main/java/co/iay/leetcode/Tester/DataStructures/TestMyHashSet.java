@@ -16,5 +16,11 @@ public class TestMyHashSet {
         Assert.assertTrue(hashSet.contains(2));    // returns true
         hashSet.remove(2);
         Assert.assertFalse(hashSet.contains(2));    // returns false (already removed)
+        hashSet.add(1000000);
+        Assert.assertTrue(hashSet.contains(1000000));
+        hashSet.add(1000000 - 1);
+        Assert.assertTrue(hashSet.contains(1000000 - 1));
+        hashSet.remove(1000000);
+        Assert.assertTrue(hashSet.contains(1000000 - 1));
     }
 }

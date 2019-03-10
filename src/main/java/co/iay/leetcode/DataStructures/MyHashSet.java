@@ -28,6 +28,9 @@ package co.iay.leetcode.DataStructures;
  * All values will be in the range of [0, 1000000].
  * The number of operations will be in the range of [1, 10000].
  * Please do not use the built-in HashSet library.
+ * Solution:
+ * 由于范围固定，使用数组记录是否存在key值即可。
+ * 目标是节省空间，改为通过位的方式记录数据。
  */
 public class MyHashSet {
     private char[] hashSet;
