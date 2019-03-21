@@ -2,6 +2,23 @@ package co.iay.leetcode.Easy;
 
 import java.util.List;
 
+/**
+ * 559. Maximum Depth of N-ary Tree
+ * https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
+ * Given a n-ary tree, find its maximum depth.
+ * <p>
+ * The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+ * <p>
+ * For example, given a 3-ary tree:
+ * <p>
+ * We should return its max depth, which is 3.
+ * <p>
+ * Note:
+ * <p>
+ * The depth of the tree is at most 1000.
+ * The total number of nodes is at most 5000.
+ */
+@SuppressWarnings({"unused"})
 public class MaximumDepthOfNAryTree {
     public static class Node {
         public int        val;

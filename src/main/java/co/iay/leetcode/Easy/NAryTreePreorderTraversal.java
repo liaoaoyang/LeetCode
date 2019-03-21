@@ -30,8 +30,6 @@ public class NAryTreePreorderTraversal {
         }
     }
 
-    ;
-
     private void travel(Node node, List<Integer> result) {
         if (null == node) {
             return;
