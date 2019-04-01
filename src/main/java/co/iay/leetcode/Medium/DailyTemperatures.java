@@ -15,6 +15,10 @@ import java.util.Stack;
  * <p>
  * Note: The length of temperatures will be in the range [1, 30000].
  * Each temperature will be an integer in the range [30, 100].
+ * Solution:
+ * 对于升序的情况，自然下一个就是比上一个温度高的情况。
+ * 对于出现降序的情况，记录当前的下标和温度。
+ * 当重新出现升序趋势时，可以从逐个比较现有的
  */
 public class DailyTemperatures {
     public int[] dailyTemperatures(int[] T) {
