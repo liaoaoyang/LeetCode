@@ -24,4 +24,13 @@ public class TestStringCompression {
         Assert.assertEquals(1, s.compress(chars));
         Assert.assertArrayEquals(expect, chars);
     }
+
+    @Test
+    public void testStringCompressionCase3() {
+        char[] chars = new char[]{'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'};
+        char[] expect = new char[]{'o', '1', '0', 'o', 'o', 'o', 'o', 'o', 'o', 'o'};
+
+        Assert.assertEquals(3, s.compress(chars));
+        Assert.assertArrayEquals(expect, chars);
+    }
 }

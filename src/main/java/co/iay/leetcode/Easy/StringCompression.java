@@ -11,10 +11,8 @@ package co.iay.leetcode.Easy;
  * <p>
  * After you are done modifying the input array in-place, return the new length of the array.
  * <p>
- * <p>
  * Follow up:
  * Could you solve it using only O(1) extra space?
- * <p>
  * <p>
  * Example 1:
  * <p>
@@ -27,7 +25,6 @@ package co.iay.leetcode.Easy;
  * Explanation:
  * "aa" is replaced by "a2". "bb" is replaced by "b2". "ccc" is replaced by "c3".
  * <p>
- * <p>
  * Example 2:
  * <p>
  * Input:
@@ -38,7 +35,6 @@ package co.iay.leetcode.Easy;
  * <p>
  * Explanation:
  * Nothing is replaced.
- * <p>
  * <p>
  * Example 3:
  * <p>
@@ -52,13 +48,33 @@ package co.iay.leetcode.Easy;
  * Since the character "a" does not repeat, it is not compressed. "bbbbbbbbbbbb" is replaced by "b12".
  * Notice each digit has it's own entry in the array.
  * <p>
- * <p>
  * Note:
  * <p>
  * All characters have an ASCII value in [35, 126].
  * 1 <= len(chars) <= 1000.
  */
 public class StringCompression {
+    private int toIntChars(int curCnt, char[] chars, int result) {
+        int curCntLen = 0;
+        int tempCurCnt = curCnt;
+
+        while (tempCurCnt > 0) {
+            ++curCntLen;
+            tempCurCnt /= 10;
+        }
+
+        int i = result + curCntLen - 1;
+
+        while (curCnt > 0) {
+            chars[i] = (char) ((curCnt % 10) + '0');
+            curCnt /= 10;
+            --i;
+            ++result;
+        }
+
+        return result;
+    }
+
     public int compress(char[] chars) {
         char cur = 0;
         int curCnt = 0;
@@ -67,12 +83,7 @@ public class StringCompression {
         for (char c : chars) {
             if (cur != c) {
                 if (cur > 0 && curCnt > 1) {
-                    char[] curCntChars = Integer.toString(curCnt).toCharArray();
-
-                    for (char curCntChar : curCntChars) {
-                        chars[result] = curCntChar;
-                        ++result;
-                    }
+                    result = toIntChars(curCnt, chars, result);
                 }
 
                 curCnt = 1;
@@ -86,12 +97,7 @@ public class StringCompression {
         }
 
         if (curCnt > 1) {
-            char[] curCntChars = Integer.toString(curCnt).toCharArray();
-
-            for (char curCntChar : curCntChars) {
-                chars[result] = curCntChar;
-                ++result;
-            }
+            result = toIntChars(curCnt, chars, result);
         }
 
         return result;
