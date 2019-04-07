@@ -35,6 +35,8 @@ import java.util.Random;
  * <p>
  * What is the expected value for the number of calls to rand7() function?
  * Could you minimize the number of calls to rand7()?
+ * Learned from:
+ * http://www.cnblogs.com/grandyang/p/9727206.html
  */
 public class ImplementRand10UsingRand7 {
     private Random random = new Random();
