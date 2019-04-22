@@ -23,6 +23,11 @@ import java.util.HashMap;
  * 9  20
  * /  \
  * 15   7
+ * Soltuion:
+ * 前序遍历与中序遍历有各自的特点。
+ * 使用数组表示，前序遍历中左子树是根节点后若干个数字，而右子树是左子树之后的剩余数字
+ * 中序遍历中，左子树是根节点左边若干个数字，右子树则是右边若干个数字。
+ * 由此规律，递归的找出相关关系即可求出原树结构
  */
 public class ConstructBinTreeFromPreorderAndInorderTraversal {
     private TreeNode rebuild(
