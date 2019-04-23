@@ -31,7 +31,6 @@ import java.util.HashMap;
  */
 public class ConstructBinTreeFromPreorderAndInorderTraversal {
     private TreeNode rebuild(
-            HashMap<Integer, Integer> preOrderIdxMap,
             HashMap<Integer, Integer> inOrderIdxMap,
             int[] preorder,
             int preOrderLeft,
@@ -58,7 +57,6 @@ public class ConstructBinTreeFromPreorderAndInorderTraversal {
             int leftTreePreOrderRight = leftTreePreOrderLeft + leftLength - 1;
 
             root.left = rebuild(
-                    preOrderIdxMap,
                     inOrderIdxMap,
                     preorder,
                     leftTreePreOrderLeft,
@@ -77,7 +75,6 @@ public class ConstructBinTreeFromPreorderAndInorderTraversal {
             int rightTreePreOrderRight = rightTreePreOrderLeft + rightLength - 1;
 
             root.right = rebuild(
-                    preOrderIdxMap,
                     inOrderIdxMap,
                     preorder,
                     rightTreePreOrderLeft,
@@ -92,19 +89,13 @@ public class ConstructBinTreeFromPreorderAndInorderTraversal {
     }
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        HashMap<Integer, Integer> preOrderIdxMap = new HashMap<>();
         HashMap<Integer, Integer> inOrderIdxMap = new HashMap<>();
-
-        for (int i = 0; i < preorder.length; ++i) {
-            preOrderIdxMap.put(preorder[i], i);
-        }
 
         for (int i = 0; i < inorder.length; ++i) {
             inOrderIdxMap.put(inorder[i], i);
         }
 
         TreeNode root = rebuild(
-                preOrderIdxMap,
                 inOrderIdxMap,
                 preorder,
                 0,
